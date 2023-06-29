@@ -2,7 +2,10 @@
     overflow: hidden;
     animation: biani 4.5s linear infinite alternate;
     width: 95%;
+    height: 100%;
 }
+
+
 
 .blob-video {
     height: 100%;

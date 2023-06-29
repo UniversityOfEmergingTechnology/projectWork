@@ -1,7 +1,7 @@
 import React from "react";
 import cross from "../assets/cross.svg";
 import Group from "../assets/Group.png";
-import banner from "../assets/banner2.mp4";
+import banner from "../assets/banner.mp4";
 import "./Hero.css";
 import group2 from "../assets/group2.svg";
 import group3 from "../assets/group3.svg";
@@ -86,7 +86,7 @@ const Hero = () => {
         {/* video */}
         <div className="flex flex-col gap-4  relative lg:w-[80%] h-[20%] mt-[30px]  items-center">
           <div className="blob-video-wrapper relative">
-            <video className="blob-video " src={banner}  autoPlay loop muted />
+            <video className="blob-video " src={banner} autoPlay loop muted ></video>
           </div>
           {/* boxes absolutely positioned over video */}
           <div
