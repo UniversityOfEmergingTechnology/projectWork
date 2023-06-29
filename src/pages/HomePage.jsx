@@ -3,8 +3,8 @@ import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import "./HomePage.css";
 import wave from '../assets/wave4.png'
-// import Brands from '../components/Brands'
 import WhyFutureLearn from "../components/WhyFutureLearn";
+import LearnCourses from "../components/LearnCourses";
 
 const HomePage = () => {
   return (
@@ -20,6 +20,10 @@ const HomePage = () => {
       {/* brands */}
       <div className="mt-[50px] w-[90%] mx-auto lg:mt-0">
         <WhyFutureLearn/>
+      </div>
+      {/* Why learn with our courses */}
+      <div className="mt-[100px] bg-black opacity-90">
+        <LearnCourses/>
       </div>
 
     </div>
