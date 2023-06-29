@@ -86,7 +86,7 @@ const Hero = () => {
         {/* video */}
         <div className="flex flex-col gap-4  relative lg:w-[80%] h-[20%] mt-[30px]  items-center">
           <div className="blob-video-wrapper relative">
-            <video className="blob-video " src={banner} autoPlay loop muted />
+            <video className="blob-video " src={banner}  autoPlay loop muted />
           </div>
           {/* boxes absolutely positioned over video */}
           <div

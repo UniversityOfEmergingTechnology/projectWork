@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
+/* body{
     overflow-x: hidden;
-}
+} */
 
 @font-face {
     font-family: 'GT Walsheim Pro';
