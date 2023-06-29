@@ -1,0 +1,12 @@
+.wave-container {
+    position: relative;
+    height: 400px;
+    width: 100vw;
+}
+
+.wave-container img {
+    height: 100%;
+    position: absolute;
+    bottom: 0px;
+    width: 100vw;
+}
