@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import "./HomePage.css";
-import wave from '../assets/wave2.png'
+import wave from '../assets/wave4.png'
 
 const HomePage = () => {
   return (

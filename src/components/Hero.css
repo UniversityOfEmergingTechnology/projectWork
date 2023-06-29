@@ -1,7 +1,7 @@
 .blob-video-wrapper {
     overflow: hidden;
     animation: biani 4.5s linear infinite alternate;
-    width: 90%;
+    width: 95%;
 }
 
 .blob-video {
@@ -9,6 +9,8 @@
     width: 100%;
     box-shadow: 0 0px 20px rgba(36, 39, 37, 0.3);
 }
+
+
 
 @keyframes biani {
     0% {
