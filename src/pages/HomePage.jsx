@@ -9,6 +9,7 @@ import LearnFrom from "../components/LearnFrom";
 import Categories from '../components/Categories'
 import WhatPeopleSay from "../components/WhatPeopleSay";
 import StartLearning from '../components/StartLearning'
+import Footer from "../components/Footer";
 
 const HomePage = () => {
   return (
@@ -44,6 +45,9 @@ const HomePage = () => {
       {/* start learning */}
       <div className="py-[100px] px-[50px] lg:px-[100px]  bg-[#6440FB]">
         <StartLearning/>
+      </div>
+      <div className="py-[100px] px-[50px] lg:px-[100px]  bg-black text-white">
+        <Footer/>
       </div>
 
     </div>
