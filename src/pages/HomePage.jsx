@@ -1,15 +1,15 @@
 import React from "react";
-import Navbar from "../components/Navbar";
-import Hero from "../components/Hero";
+import Navbar from "../components/common/Navbar";
+import Hero from "../components/HomePage/Hero";
 import "./HomePage.css";
 import wave from '../assets/wave4.png'
-import WhyFutureLearn from "../components/WhyFutureLearn";
-import LearnCourses from "../components/LearnCourses";
-import LearnFrom from "../components/LearnFrom";
-import Categories from '../components/Categories'
-import WhatPeopleSay from "../components/WhatPeopleSay";
-import StartLearning from '../components/StartLearning'
-import Footer from "../components/Footer";
+import WhyFutureLearn from '../components/HomePage/WhyFutureLearn'
+import LearnCourses from "../components/HomePage/LearnCourses";
+import LearnFrom from "../components/HomePage/LearnFrom";
+import Categories from '../components/HomePage/Categories'
+import WhatPeopleSay from "../components/HomePage/WhatPeopleSay";
+import StartLearning from '../components/HomePage//StartLearning'
+import Footer from "../components/common/Footer";
 
 const HomePage = () => {
   return (

@@ -1,16 +1,16 @@
 import React from "react";
-import cross from "../assets/cross.svg";
-import Group from "../assets/Group.png";
-import banner from "../assets/banner.mp4";
+import cross from "../../assets/cross.svg";
+import Group from "../../assets/Group.png";
+import banner from "../../assets/banner.mp4";
 import "./Hero.css";
-import group2 from "../assets/group2.svg";
-import group3 from "../assets/group3.svg";
-import badge from "../assets/badge.svg";
-import cap from "../assets/cap.svg";
-import play from "../assets/play.svg";
-import read from "../assets/read.svg";
-import star from "../assets/star.svg";
-import bag from "../assets/bag.svg";
+import group2 from "../../assets/group2.svg";
+import group3 from "../../assets/group3.svg";
+import badge from "../../assets/badge.svg";
+import cap from "../../assets/cap.svg";
+import play from "../../assets/play.svg";
+import read from "../../assets/read.svg";
+import star from "../../assets/star.svg";
+import bag from "../../assets/bag.svg";
 
 const infoArray = [
   {

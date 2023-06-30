@@ -1,7 +1,7 @@
 import React from 'react'
-import one from '../assets/learnCourses/one.svg'
-import two from '../assets/learnCourses/two.svg'
-import three from '../assets/learnCourses/three.svg'
+import one from '../../assets/learnCourses/one.svg'
+import two from '../../assets/learnCourses/two.svg'
+import three from '../../assets/learnCourses/three.svg'
 
 const learnCousesData = [
     {

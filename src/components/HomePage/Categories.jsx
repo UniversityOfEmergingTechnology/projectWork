@@ -1,10 +1,10 @@
 import React from "react";
-import one from "../assets/categories/one.svg";
-import two from "../assets/categories/two.svg";
-import three from "../assets/categories/three.svg";
-import fourth from "../assets/categories/fourth.svg";
-import fifth from "../assets/categories/fifth.svg";
-import sixth from "../assets/categories/sixth.svg";
+import one from "../../assets/categories/one.svg";
+import two from "../../assets/categories/two.svg";
+import three from "../../assets/categories/three.svg";
+import fourth from "../../assets/categories/fourth.svg";
+import fifth from "../../assets/categories/fifth.svg";
+import sixth from "../../assets/categories/sixth.svg";
 import "swiper/css";
 import "swiper/css/pagination"; // import styles for pagination
 import "swiper/css/navigation"; // import styles for navigation

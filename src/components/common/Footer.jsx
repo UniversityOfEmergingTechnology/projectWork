@@ -1,9 +1,9 @@
 import React from "react";
-import { FooterLink2 } from "../data/footer-links";
+import { FooterLink2 } from "../../data/footer-links";
 import { Link } from "react-router-dom";
 
 // Images
-import Logo from "../assets/logo2.svg";
+import Logo from "../../assets/logo2.svg";
 
 // Icons
 import { FaFacebook, FaGoogle, FaTwitter, FaYoutube } from "react-icons/fa";

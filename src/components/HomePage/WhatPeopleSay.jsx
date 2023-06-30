@@ -5,8 +5,8 @@ import "swiper/css/pagination"; // import styles for pagination
 import "swiper/css/navigation"; // import styles for navigation
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper";
-import comma from "../assets/comma.svg";
-import people from "../assets/people.jpg";
+import comma from "../../assets/comma.svg";
+import people from "../../assets/people.jpg";
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
 

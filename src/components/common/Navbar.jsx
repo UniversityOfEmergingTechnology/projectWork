@@ -1,9 +1,9 @@
 import React from "react";
-import logo from "../assets/logo.svg";
-import search from "../assets/search.svg";
-import sidebar from "../assets/sidebar.svg";
-import basket from "../assets/basket.svg";
-import Vector from "../assets/Vector.svg";
+import logo from "../../assets/logo.svg";
+import search from "../../assets/search.svg";
+import sidebar from "../../assets/sidebar.svg";
+import basket from "../../assets/basket.svg";
+import Vector from "../../assets/Vector.svg";
 
 const Navbar = () => {
   // bg-[#1A064F]

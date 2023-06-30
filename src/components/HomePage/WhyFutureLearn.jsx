@@ -1,9 +1,9 @@
 import React from "react";
 import FutureCard from "./FutureCard";
-import one from '../assets/futureLearn/one.svg'
-import two from '../assets/futureLearn/two.svg'
-import three from '../assets/futureLearn/three.svg'
-import fourth from '../assets/futureLearn/fourth.svg'
+import one from '../../assets/futureLearn/one.svg'
+import two from '../../assets/futureLearn/two.svg'
+import three from '../../assets/futureLearn/three.svg'
+import fourth from '../../assets/futureLearn/fourth.svg'
 
 
 // mock data

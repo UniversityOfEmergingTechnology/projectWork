@@ -1,5 +1,5 @@
 import React from "react";
-import phone from "../assets/phone.png";
+import phone from "../../assets/phone.png";
 import { AiOutlineApple } from "react-icons/ai";
 import { FaGooglePlay } from "react-icons/fa";
 
