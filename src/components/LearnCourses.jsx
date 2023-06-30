@@ -27,10 +27,10 @@ const LearnCourses = () => {
         <h3 className='text-center text-[30px] font-walsheimCon leading-normal text-white'>Why Learn with our Courses?</h3>
         <p className='text-center text-[15px] text-white leading-[26px] font-walsheimReg'>Lorem ipsum dolor sit amet, consectetur.</p>
 
-        <div className='flex flex-col items-center lg:flex-row gap-4 mt-10'>
+        <div className='flex flex-col gap-4 items-center xl:justify-between lg:flex-row  mt-10'>
             {
                 learnCousesData.map((course , index) => (
-                    <div key={index} className='h-[350px] rounded-[8px] space-y-8 bg-white flex flex-col items-center justify-center w-[300px] lg:w-[410px] duration-300 hover:scale-125  hover:border-[#0a2418] hover:border-[2px]'>
+                    <div key={index} className='h-[350px] rounded-[8px] space-y-8 bg-white flex flex-col items-center justify-center w-[300px]  lg:w-[350px] duration-300 hover:scale-125  hover:border-[#0a2418] hover:border-[2px]'>
                         <img src={course.img} alt="" />
                         <h3 className='font-normal text-[24px] font-walsheimCon'>{course.title}</h3>
                         <p className='text-[#4F547B] text-center leading-[26px] font-walsheimReg text-[15px]' >{course.desc}</p>
