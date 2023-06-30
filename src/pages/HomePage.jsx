@@ -6,6 +6,7 @@ import wave from '../assets/wave4.png'
 import WhyFutureLearn from "../components/WhyFutureLearn";
 import LearnCourses from "../components/LearnCourses";
 import LearnFrom from "../components/LearnFrom";
+import Categories from '../components/Categories'
 
 const HomePage = () => {
   return (
@@ -25,6 +26,10 @@ const HomePage = () => {
       {/* Why learn with our courses */}
       <div className="mt-[100px] bg-black opacity-90">
         <LearnCourses/>
+      </div>
+      {/* top categories */}
+      <div className="py-[100px]  lg:px-[100px]  bg-white">
+        <Categories/>
       </div>
       {/* learn from anywhere */}
       <div className="py-[100px] lg:px-[100px]  bg-[#EEF2F6]">
