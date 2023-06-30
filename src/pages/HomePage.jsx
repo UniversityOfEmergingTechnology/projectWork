@@ -7,6 +7,7 @@ import WhyFutureLearn from "../components/WhyFutureLearn";
 import LearnCourses from "../components/LearnCourses";
 import LearnFrom from "../components/LearnFrom";
 import Categories from '../components/Categories'
+import WhatPeopleSay from "../components/WhatPeopleSay";
 
 const HomePage = () => {
   return (
@@ -30,6 +31,10 @@ const HomePage = () => {
       {/* top categories */}
       <div className="py-[100px]  lg:px-[100px]  bg-white">
         <Categories/>
+      </div>
+      {/* what people say */}
+      <div className="py-[100px] bg-[#6440FB] px-[50px]  lg:px-[100px] ">
+        <WhatPeopleSay/>
       </div>
       {/* learn from anywhere */}
       <div className="py-[100px] lg:px-[100px]  bg-[#EEF2F6]">
