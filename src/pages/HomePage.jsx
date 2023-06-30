@@ -8,6 +8,7 @@ import LearnCourses from "../components/LearnCourses";
 import LearnFrom from "../components/LearnFrom";
 import Categories from '../components/Categories'
 import WhatPeopleSay from "../components/WhatPeopleSay";
+import StartLearning from '../components/StartLearning'
 
 const HomePage = () => {
   return (
@@ -39,6 +40,10 @@ const HomePage = () => {
       {/* learn from anywhere */}
       <div className="py-[100px] lg:px-[100px]  bg-[#EEF2F6]">
         <LearnFrom/>
+      </div>
+      {/* start learning */}
+      <div className="py-[100px] px-[50px] lg:px-[100px]  bg-[#6440FB]">
+        <StartLearning/>
       </div>
 
     </div>
