@@ -10,6 +10,7 @@ import "swiper/css/pagination"; // import styles for pagination
 import "swiper/css/navigation"; // import styles for navigation
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper";
+import './Categories.css'
 
 SwiperCore.use([Autoplay, Pagination, Navigation]);
 // Import Swiper styles
@@ -97,7 +98,7 @@ const Categories = () => {
         loop={true}
         speed={500}
         autoplay
-        className="w-[100%] h-[100%] cursor-pointer "
+        className="w-[100%] h-[100%]  cursor-pointer "
         pagination={{ clickable: true }} // add pagination
         navigation // add navigation
         breakpoints={{
@@ -122,7 +123,7 @@ const Categories = () => {
           <SwiperSlide
             key={index}
           >
-            <div className="w-[180px] h-[240px]  lg:w-[190px] lg:h-[240px] flex flex-col gap-4 items-center justify-center group hover:bg-black duration-300  rounded-[8px] bg-[#EEF2F6] ">
+            <div className="w-[180px] h-[240px] lg:w-[220px] xl:w-[290px] lg:h-[240px] flex flex-col gap-4 items-center justify-center group hover:bg-black duration-300  rounded-[8px] bg-[#EEF2F6] ">
               <div className="w-24 h-24  flex items-center justify-center  bg-white rounded-full">
                 <img src={category.img} className="w-12 h-12" alt="" />{" "}
               </div>
