@@ -6,10 +6,10 @@ const Login = () => {
     <div className="flex flex-col w-screen h-screen">
       <Navbar />
       <Template
-        title="Welcome Back"
+        title="Join the thriving community mastering coding for free with Educraft."
         description1="Crafting competencies for the present, future, and beyond."
         description2="Securing your career with future-focused education"
-        formType="login"
+        formType="signup"
       />
     </div>
   );

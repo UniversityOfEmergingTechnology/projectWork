@@ -48,7 +48,7 @@ function LoginForm() {
           style={{
             boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",
           }}
-          className="w-full rounded-[0.5rem] bg-richblack-800 font-walsheimReg p-[12px] text-richblack-5 focus:bg-white focus:text-black"
+          className="w-full rounded-[0.5rem] bg-richblack-800 font-walsheimReg p-[12px] text-[#F5F5DC] focus:bg-white focus:text-black"
         />
       </label>
       <label className="relative">
@@ -65,7 +65,7 @@ function LoginForm() {
           style={{
             boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",
           }}
-          className="w-full rounded-[0.5rem] focus:bg-white focus:text-black font-walsheimReg bg-richblack-800 p-[12px] pr-12 text-richblack-5"
+          className="w-full rounded-[0.5rem] focus:bg-white focus:text-black font-walsheimReg bg-richblack-800 p-[12px] pr-12 text-[#F5F5DC]"
         />
         <span
           onClick={() => setShowPassword((prev) => !prev)}
@@ -85,7 +85,7 @@ function LoginForm() {
       </label>
       <button
         type="submit"
-        className="mt-6 rounded-[8px] hover:scale-95 duration-300 bg-yellow-50 py-[8px] px-[12px] font-medium text-richblack-900"
+        className="mt-6 rounded-[8px] hover:scale-95 duration-300 bg-yellow-50 py-[12px] px-[12px] font-medium text-richblack-900 font-walsheimCon"
       >
         Sign In
       </button>
