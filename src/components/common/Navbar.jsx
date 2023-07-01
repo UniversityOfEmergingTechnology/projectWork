@@ -81,12 +81,12 @@ const Navbar = () => {
           className="w-[20px] h-[20px] lg:hidden"
           alt="Logo not able to show"
         />
-        <Link to="/login">
+        <Link to="/login"  className="lg:block hidden">
           <button className="text-[15px] hidden lg:block font-walsheimCon leading-[26px] text-white">
             Log In
           </button>
         </Link>
-        <Link to="/signup">
+        <Link to="/signup"  className="lg:block hidden">
           <div className="bg-white w-[120px] hidden lg:flex h-[40px]  flex-row items-center justify-center rounded-[8px]">
             <button className="text-[15px] font-walsheimCon leading-[26px] text-black">
               Sign Up
