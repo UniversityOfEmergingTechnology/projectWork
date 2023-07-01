@@ -3,11 +3,22 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
-import 'swiper/swiper.min.css';
+import "swiper/swiper.min.css";
+import { Provider } from "react-redux";
+import { Toaster } from "react-hot-toast";
+import { configureStore } from "@reduxjs/toolkit";
+import rootReducer from './reducer/index'
+
+const store = configureStore({
+  reducer: rootReducer,
+});
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
+  <Provider store={store}>
+    <BrowserRouter>
+      <App />
+      <Toaster/>    
+    </BrowserRouter>
+  </Provider>
 );
