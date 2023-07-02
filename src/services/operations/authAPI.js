@@ -109,3 +109,66 @@ export function sendOtp(email, navigate) {
     toast.dismiss(toastId);
   };
 }
+
+// get password reset token
+export function getPasswordResetToken(email, setEmailSent) {
+  return async (dispatch) => {
+    const toastId = toast.loading("Loading...");
+    dispatch(setLoading(true));
+    try {
+      const response = await apiConnector("POST", RESETPASSTOKEN_API, {
+        email,
+      });
+      console.log("RESETPASSTOKEN RESPONSE............", response);
+      if (!response.data.success) {
+        throw new Error(response.data.message);
+      }
+      toast.success("Reset email sent");
+      setEmailSent(true);
+    } catch (error) {
+      console.log("RESETPASSTOKEN ERROR............", error);
+      toast.error("Failed To Send Reset Email");
+    }
+    toast.dismiss(toastId);
+    dispatch(setLoading(false));
+  };
+}
+
+// reset password functionality
+export function resetPassword(password, confirmPassword, token, navigate) {
+  return async (dispatch) => {
+    const toastId = toast.loading("Loading....");
+    dispatch(setLoading(true));
+
+    try {
+      const response = await apiConnector("POST", RESETPASSWORD_API, {
+        password,
+        confirmPassword,
+        token,
+      });
+      console.log("RESETPASSWORD RESPONSE............", response);
+
+      if (!response.data.success) {
+        throw new Error(response.data.message);
+      }
+
+      toast.success("Password Reset Successfully");
+      navigate("/login");
+    } catch (error) {
+      console.log("RESETPASSWORD ERROR............", error);
+      toast.error("Failed To Reset Password");
+    }
+    toast.dismiss(toastId);
+    dispatch(setLoading(false));
+  };
+}
+
+// logout functionality
+export function logout(navigate) {
+  return async (dispatch) => {
+    dispatch(setToken(null));
+    localStorage.removeItem("token");
+    toast.success("Logged out");
+    navigate("/");
+  };
+}
