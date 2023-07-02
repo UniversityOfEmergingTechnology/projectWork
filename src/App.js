@@ -5,6 +5,8 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import VerifyEmail from "./pages/VerifyEmail";
 import Error from "./pages/Error";
+import ForgotPassword from "./pages/ForgotPassword";
+import UpdatePassword from "./pages/UpdatePassword";
 
 import OpenRoute from "./components/Auth/OpenRoute";
 import PrivateRoute from "./components/Auth/PrivateRoute";
@@ -38,6 +40,23 @@ function App() {
             </OpenRoute>
           }
         ></Route>
+        <Route
+          path="forgot-password"
+          element={
+            <OpenRoute>
+              <ForgotPassword />
+            </OpenRoute>
+          }
+        />
+                <Route
+          // path="update-password/:id"
+          path="update-password/:id"
+          element={
+            <OpenRoute>
+              <UpdatePassword />
+            </OpenRoute>
+          }
+        />
         <Route path="*" element={<Error />} />
       </Routes>
     </div>

@@ -3,7 +3,7 @@ import Template from "../components/Auth/Template";
 import Navbar from "../components/common/Navbar";
 const Login = () => {
   return (
-    <div className="flex flex-col w-screen h-screen">
+    <>
       <Navbar />
       <Template
         title="Join the thriving community mastering coding for free with Educraft."
@@ -11,7 +11,7 @@ const Login = () => {
         description2="Securing your career with future-focused education"
         formType="signup"
       />
-    </div>
+    </>
   );
 };
 

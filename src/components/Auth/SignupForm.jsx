@@ -87,7 +87,7 @@ function SignupForm() {
       <Tab tabData={tabData} field={accountType} setField={setAccountType} />
       {/* Form */}
       <form onSubmit={handleOnSubmit} className="flex w-full flex-col gap-y-4">
-        <div className="flex gap-x-4">
+        <div className="flex gap-x-4 lg:flex-row flex-col">
           <label>
             <p className="mb-1 text-[0.875rem] font-walsheimCon leading-[1.375rem] text-richblack-5">
               First Name <sup className="text-pink-200">*</sup>
@@ -140,7 +140,7 @@ function SignupForm() {
             className=" focus:text-black focus:bg-white font-walsheimReg w-full rounded-[0.5rem] bg-richblack-800 p-[12px] text-[#F5F5DC]"
           />
         </label>
-        <div className="flex gap-x-4">
+        <div className="flex gap-x-4 lg:flex-row flex-col">
           <label className="relative">
             <p className="mb-1 text-[0.875rem] font-walsheimCon leading-[1.375rem] text-richblack-5">
               Create Password <sup className="text-pink-200">*</sup>

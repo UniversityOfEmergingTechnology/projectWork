@@ -7,24 +7,13 @@ import bg from "../../assets/bg4.mp4";
 const Template = ({ title, description1, description2, formType }) => {
   const { loading } = useSelector((state) => state.auth);
   return (
-    // <div className="flex flex-row w-screen h-screen">
-    <div className="flex flex-row w-screen h-screen">
+    <div className="flex flex-row w-full h-full relative">
       <video
         autoPlay
         muted
         loop
         id="myVideo"
-        style={{
-          position: "absolute",
-          width: "100%",
-          left: "50%",
-          top: "50%",
-          height: "100%",
-          opacity: 1,
-          objectFit: "cover",
-          transform: "translate(-50%, -50%)",
-          zIndex: "-1",
-        }}
+        className="absolute top-0 left-0 min-w-full min-h-full object-cover z-[-1]"
       >
         <source src={bg} type="video/mp4" />
       </video>
