@@ -7,9 +7,13 @@ import VerifyEmail from "./pages/VerifyEmail";
 import Error from "./pages/Error";
 import ForgotPassword from "./pages/ForgotPassword";
 import UpdatePassword from "./pages/UpdatePassword";
+import Dashboard from "./pages/Dashboard";
+import MyProfile from "./components/Dashboard/MyProfile";
 
 import OpenRoute from "./components/Auth/OpenRoute";
 import PrivateRoute from "./components/Auth/PrivateRoute";
+
+import { ACCOUNT_TYPE } from "./utils/constants";
 
 function App() {
   return (
@@ -48,8 +52,7 @@ function App() {
             </OpenRoute>
           }
         />
-                <Route
-          // path="update-password/:id"
+        <Route
           path="update-password/:id"
           element={
             <OpenRoute>
@@ -57,6 +60,28 @@ function App() {
             </OpenRoute>
           }
         />
+
+        <Route
+          element={
+            <PrivateRoute>
+              <Dashboard />
+            </PrivateRoute>
+          }
+        >
+          <Route path="dashboard/my-profile" element={<MyProfile />} />
+          {/* <Route path="dashboard/Settings" element={<Settings />} /> */}
+
+          {/* {user?.accountType === ACCOUNT_TYPE.STUDENT && (
+            <>
+              <Route path="dashboard/cart" element={<Cart />} />
+              <Route
+                path="dashboard/enrolled-courses"
+                element={<EnrolledCourses />}
+              />
+            </>
+          )} */}
+        </Route>
+
         <Route path="*" element={<Error />} />
       </Routes>
     </div>

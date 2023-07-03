@@ -3,6 +3,8 @@ import { toast } from "react-hot-toast";
 import { apiConnector } from "../apiconnector";
 import { setLoading, setToken } from "../../slices/authSlice";
 import { endpoints } from "../apis";
+import { resetCart } from "../../slices/cartSlice";
+import { setUser } from "../../slices/profileSlice";
 
 const {
   SENDOTP_API,
@@ -28,8 +30,11 @@ export function login(email, password, navigate) {
       if (!response.data.success) {
         throw new Error(response.data.message);
       }
-      toast.success("Login successfull");
       dispatch(setToken(response.data.token));
+      const userImage = response.data?.user?.image
+        ? response.data.user.image
+        : `https://api.dicebear.com/5.x/initials/svg?seed=${response.data.user.firstName} ${response.data.user.lastName}`;
+      dispatch(setUser({ ...response.data.user, image: userImage }));
       localStorage.setItem("token", JSON.stringify(response.data.token));
       navigate("/dashboard/my-profile");
     } catch (error) {
@@ -167,8 +172,11 @@ export function resetPassword(password, confirmPassword, token, navigate) {
 export function logout(navigate) {
   return async (dispatch) => {
     dispatch(setToken(null));
+    dispatch(setUser(null));
+    dispatch(resetCart());
     localStorage.removeItem("token");
-    toast.success("Logged out");
+    localStorage.removeItem("user");
+    toast.success("Logged Out");
     navigate("/");
   };
 }
