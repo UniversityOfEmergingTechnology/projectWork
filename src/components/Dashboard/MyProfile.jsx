@@ -52,7 +52,7 @@ export default function MyProfile() {
         <p
           className={`${
             user?.additionalDetails?.about
-              ? "text-richblack-5"
+              ? "text-[#4F547B] font-walsheimReg"
               : "text-richblack-400"
           } text-sm font-medium`}
         >

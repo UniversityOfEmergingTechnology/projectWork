@@ -2,7 +2,7 @@ import React from "react";
 import SignupForm from "./SignupForm";
 import LoginForm from "./LoginForm";
 import { useSelector } from "react-redux";
-import bg from "../../assets/bg4.mp4";
+import bg from "../../assets/bg2.mp4";
 
 const Template = ({ title, description1, description2, formType }) => {
   const { loading } = useSelector((state) => state.auth);

@@ -9,6 +9,7 @@ import ForgotPassword from "./pages/ForgotPassword";
 import UpdatePassword from "./pages/UpdatePassword";
 import Dashboard from "./pages/Dashboard";
 import MyProfile from "./components/Dashboard/MyProfile";
+import Settings from './components/Dashboard/Settings/index'
 
 import OpenRoute from "./components/Auth/OpenRoute";
 import PrivateRoute from "./components/Auth/PrivateRoute";
@@ -69,7 +70,7 @@ function App() {
           }
         >
           <Route path="dashboard/my-profile" element={<MyProfile />} />
-          {/* <Route path="dashboard/Settings" element={<Settings />} /> */}
+          <Route path="dashboard/Settings" element={<Settings />} />
 
           {/* {user?.accountType === ACCOUNT_TYPE.STUDENT && (
             <>
