@@ -17,20 +17,24 @@ export default function SidebarLink({ link, iconName }) {
     <NavLink
       to={link.path}
       onClick={() => dispatch(resetCourseState())}
-      className={`relative px-8 py-2 text-sm font-medium ${
+      className={`relative px-8 py-3  font-medium ${
         matchRoute(link.path)
-          ? "bg-yellow-800 text-yellow-50"
-          : "text-white font-walsheimMed"
-      } transition-all duration-200`}
+          ? "bg-[#1A064F] rounded-[16px] text-white"
+          : "text-[#4F547B] font-walsheimMed"
+      } transition-all text-sm duration-1000 hover:scale-95 scale-90`}
     >
-      <span
+      {/* <span
         className={`absolute left-0 top-0 h-full w-[0.15rem] bg-yellow-50 ${
           matchRoute(link.path) ? "opacity-100" : "opacity-0"
         }`}
-      ></span>
+      ></span> */}
       <div className="flex items-center gap-x-2">
         {/* Icon Goes Here */}
-        <Icon className="text-lg" />
+        <Icon
+          className={`text-lg 
+        ${matchRoute(link.path) ? "text-white" : "text-[#4F547B]"}
+        `}
+        />
         <span className="">{link.name}</span>
       </div>
     </NavLink>
