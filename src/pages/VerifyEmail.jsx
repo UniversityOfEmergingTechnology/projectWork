@@ -48,7 +48,7 @@ const VerifyEmail = () => {
     };
   return (
     <div className="flex flex-col bg-black w-screen h-screen">
-    <Navbar />
+      <Navbar theme={'dark'} />
     <div className="flex flex-row w-screen h-screen items-center justify-center">
       {loading ? (
         <div>

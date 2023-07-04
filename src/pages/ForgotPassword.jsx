@@ -19,7 +19,7 @@ function ForgotPassword() {
 
   return (
     <>
-      <Navbar />
+      <Navbar theme={'dark'} />
       <div className="grid min-h-[calc(100vh-3.5rem)] bg-black place-items-center">
         {loading ? (
           <div className="spinner"></div>

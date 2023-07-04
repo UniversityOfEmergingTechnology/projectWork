@@ -36,7 +36,7 @@ function UpdatePassword() {
 
   return (
     <>
-    <Navbar />
+      <Navbar theme={'dark'} />
     <div className="grid bg-black min-h-[calc(100vh-3.5rem)] place-items-center">
       {loading ? (
         <div className="spinner"></div>

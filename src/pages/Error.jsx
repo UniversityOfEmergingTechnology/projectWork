@@ -1,6 +1,5 @@
 import React from "react";
 import Navbar from "../components/common/Navbar";
-import Footer from "../components/common/Footer";
 import Frame from "../assets/Frame.png";
 import { Link } from "react-router-dom";
 
@@ -31,9 +30,6 @@ const Error = () => {
         </div>
       </div>
 
-      <div className="bg-black">
-        <Footer />
-      </div>
     </div>
   );
 };

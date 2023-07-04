@@ -4,7 +4,7 @@ import Navbar from "../components/common/Navbar";
 const Login = () => {
   return (
     <>
-      <Navbar />
+      <Navbar theme={'dark'} />
       <Template
         title="Welcome Back"
         description1="Crafting competencies for the present, future, and beyond."

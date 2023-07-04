@@ -14,7 +14,7 @@ import Footer from "../components/common/Footer";
 const HomePage = () => {
   return (
     <div className="flex flex-col w-full h-full">
-      <Navbar />
+      <Navbar theme={'dark'} />
       {/* hero section */}
       <div className="relative flex flex-col">
         <Hero />
