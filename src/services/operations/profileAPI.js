@@ -79,6 +79,7 @@ export async function getInstructorData(token) {
 
     console.log("GET_INSTRUCTOR_API_RESPONSE", response);
     result = response?.data?.courses;
+    toast.success('Fetched information')
   } catch (error) {
     console.log("GET_INSTRUCTOR_API ERROR", error);
     toast.error("Could not Get Instructor Data");

@@ -13,6 +13,7 @@ import Settings from './components/Dashboard/Settings/index'
 import AddCourse from "./components/Dashboard/AddCourse";
 import MyCourses from "./components/Dashboard/MyCourses";
 import EditCourse from "./components/Dashboard/EditCourse";
+import Instructor from './components/Dashboard/InstructorDashboard/Instructor'
 
 import OpenRoute from "./components/Auth/OpenRoute";
 import PrivateRoute from "./components/Auth/PrivateRoute";
@@ -92,7 +93,7 @@ function App() {
           {
         user?.accountType === ACCOUNT_TYPE.INSTRUCTOR && (
           <>
-          {/* <Route path="dashboard/instructor" element={<Instructor />} /> */}
+          <Route path="dashboard/instructor" element={<Instructor />} />
           <Route path="dashboard/add-course" element={<AddCourse />} />
           <Route path="dashboard/my-courses" element={<MyCourses />} />
           <Route path="dashboard/edit-course/:courseId" element={<EditCourse />} />
