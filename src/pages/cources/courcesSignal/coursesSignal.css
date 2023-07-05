@@ -1,0 +1,368 @@
+.centerWrapper{
+    max-width:1290px;
+    margin:0 auto;
+    flex-shrink: 0;
+}
+.outerCource{
+    width:100%;
+    display:inline-block;
+}
+.outerBrateKrams{
+    width:100%;
+    display:inline-block;
+    background:#F5F7FE;
+    padding:16px 0px;
+}
+.brateKramInfo{
+    width:100%;
+    display:flex;
+    align-items:center;
+}
+.brateKramInfo ul li{
+    color: #4F547B;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    list-style: disc;
+    padding-right: 25px;
+}
+.brateKramInfo ul {
+    list-style-position:inside;
+    display: inline-flex;
+    padding-left: 17px;
+}
+.brateKramInfo ul li:last-child{
+    color:#140342;
+}
+.bannerInfoCources{
+    width:100%;
+    display:inline-block;
+    background:#F5F7FE;
+    padding:60px 0px 40px;
+}
+.userExperience{
+    display:inline-block;
+    width: 665px;
+}
+.bestSellerBtn{
+    width:100%;
+    display:inline-block;
+    margin-bottom:20px;
+}
+.bestSellBtn{
+    background:#00FF84;
+    display: inline-flex;
+    padding: 9px 17px 7px 17px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 60px;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color:#140342;
+    cursor: pointer;
+}
+.bestSellBtnNew{
+    background:#E8543E;
+    display: inline-flex;
+    padding: 9px 17px 7px 17px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 60px;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color:#fff;
+    cursor: pointer;
+    margin:0px 10px;
+}
+.bestSellBtnPop{
+    display: inline-flex;
+    padding: 9px 17px 7px 17px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 60px;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    cursor: pointer;
+    background:#6440FB;
+    color:#fff;
+}
+.userExperience h1{
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 45px;
+    margin-bottom:20px;
+}
+.userExperience p{
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+}
+.ratingInfoBannerInfo{
+    width:100%;
+    display:flex;
+    align-items:center;
+    margin:20px 0px;
+}
+.ratingInfoBannerInfo .text{
+    font-size: 14px;
+    color: #E59819;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.ratingInfoBannerInfo img{
+    margin:0px 5px;
+}
+.ratingInfoBannerInfo .year{
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color:#4F547B;
+}
+.ratingCard{
+    width:auto;
+    display: flex;
+    align-items: center;
+}
+.enrolled{
+    margin-left:25px;
+    font-size: 14px;
+    color:#4F547B;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+}
+.ratingInfoUser{
+    width:100%;
+    display:flex;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    color:#4F547B;
+
+}
+.ratingInfoUser span{
+    width: 35px;
+    height: 53px;
+    flex-shrink: 0;
+    border-radius:100%;
+}
+.ratingInfoUser span img{
+    border-radius:100%;
+}
+.tabInfoContent{
+    width:100%;
+    display:inline-block;
+    padding:30px 0px;
+}
+.tabSection{
+    width:100%;
+    display:flex;
+}
+.leftTabInfo{
+    width:850px;
+}
+.outerTabInnerCnt{
+    width:100%;
+    display:inline-block;
+    padding:60px 0px;
+}
+.outerTabInnerCnt h2{
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color:#140342;
+    margin-bottom:30px;
+}
+.outerTabInnerCnt p{
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    color:#4F547B;
+}
+.aboutLearn{
+    width:100%;
+    display:inline-block;
+    padding:50px 0px;
+}
+.aboutLearn h2{
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color:#140342;
+}
+.contentDataInr{
+    width:100%;
+    display:inline-block;
+}
+.cardInrPrt{
+    width:50%;
+    padding:0px 0px 20px;
+    display:flex;
+    float:left;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    color:#4F547B;
+}
+.cardInrPrt img{
+    min-width: 25px;
+    margin-right:10px;
+    width: auto;
+}
+.contentDataInr ul{
+    padding-left:20px;
+}
+.contentDataInr ul li{
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    color:#4F547B;
+    list-style: disc;
+}
+
+
+.videoCardLession{
+    width: 360px;
+    box-shadow: 0px 20px 30px 0px rgba(25, 25, 46, 0.04);
+    border-radius: 8px;
+    border: 1px solid #EDEDED;
+    background:#fff;
+    margin-left:auto;
+    position:relative;
+    margin-top: -400px;
+    height: max-content;
+    padding-bottom: 74px;
+}
+.videoData{
+    width:100%;
+    padding:10px;
+    box-sizing: border-box;
+    display:inline-block;
+    height:236px;
+}
+.videoData iframe{
+    width:100%;
+    height:100%;
+    border-radius:6px;
+}
+.outerCardPr{
+    width:100%;
+    display:inline-block;
+    padding:0px 30px;
+    box-sizing: border-box;
+}
+.priceIn{
+    display:flex;
+    justify-content: space-between;
+    width:100%;
+    margin:20px 0px;
+    align-items:center;
+}
+.priceIn h3{
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color:#140342;
+}
+.priceIn p{
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: strikethrough;
+    color:#4F547B;
+}
+.addtoCart{
+    border-radius: 8px;
+    background: #6440FB;
+    width:100%;
+    display:inline-block;
+    text-align:center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    color:#FFFFFF;
+    line-height: normal;
+    margin-bottom:10px;
+    padding:20px;
+    box-sizing: border-box;
+}
+.buyNowBtn{
+    border-radius: 8px;
+    background: #fff;
+    width:100%;
+    display:inline-block;
+    text-align:center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    color:#1A064F;
+    line-height: normal;
+    margin-bottom:10px;
+    padding:20px;
+    box-sizing: border-box;
+    border:2px solid #1A064F;
+}
+.outerCardPr h5{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align:center;
+    color:#4F547B;
+    margin:30px 0px;
+}
+.lessionInfo{
+    width:100%;
+    display:inline-block;
+}
+.innerLesson{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid #EDEDED;
+}
+.smallIfo{
+    text-align: right;
+    font-size: 15px;
+    color:#4F547B;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+}
+.cntLft{
+    font-size: 15px;
+    color: #140342;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+}
+.cntLft img{
+    margin-right:5px;
+}
+.socialInfo{
+    width:100%;
+    text-align:center;
+}

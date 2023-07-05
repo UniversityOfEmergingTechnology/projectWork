@@ -1,0 +1,316 @@
+.centerWrapper{
+    max-width:1290px;
+    margin:0 auto;
+    flex-shrink: 0;
+}
+.outerCource{
+    width:100%;
+    display:inline-block;
+}
+.outerBrateKrams{
+    width:100%;
+    display:inline-block;
+    background:#F5F7FE;
+    padding:16px 0px;
+}
+.brateKramInfo{
+    width:100%;
+    display:flex;
+    align-items:center;
+}
+.brateKramInfo ul li{
+    color: #4F547B;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    list-style: disc;
+    padding-right: 25px;
+}
+.brateKramInfo ul {
+    list-style-position:inside;
+    display: inline-flex
+}
+.brateKramInfo ul li:last-child{
+    color:#140342;
+}
+.outerCourceHeading{
+    width:100%;
+    display:inline-block;
+    margin-top:90px;
+    margin-bottom:101px;
+}
+.outerCourceHeading h2{
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color:#140342;
+}
+.outerCourceHeading p{
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 36px;
+    text-transform: capitalize;
+    color:#4F547B;
+}
+.courceCardPrice{
+    width:100%;
+    display:inline-block;
+}
+.cardDataInfo{
+    width:100%;
+    display:flex;
+    padding-bottom:50px;
+}
+.leftAccordianInfoCategory{
+    width: 270px;
+    min-width: 270px;
+}
+.outerItemCategory{
+    width: 100%;
+    display: inline-block;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #DDDDDD;
+    margin-bottom: 18px;
+}
+.outerItemCategory:last-child{
+    border:none;
+}
+.outerItemCategory h4{
+    cursor: pointer;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    align-items: center;
+    line-height: normal;
+    margin-bottom:20px;
+}
+.outerItemCategory h4 img{
+    width:12px;
+}
+.itemCheckinfo{
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    cursor: pointer;
+    margin-bottom:5px;
+}
+.checkBoxInfo{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    color:#1A064F;
+    display:flex;
+    align-items:center;
+}
+.checkBoxInfo input{
+    margin-right:10px;
+}
+.countInfo{
+    text-align: right;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    color:#4F547B;
+}
+.rightDataCardInfo{
+    width: 100%;
+    display: inline-block;
+    padding: 0px 30px;
+    box-sizing: border-box;
+}
+.shortingInfo{
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    padding:0px 15px;
+    box-sizing: border-box;
+}
+.leftShort{
+    width:auto;
+}
+.leftShort p{
+    color: #4F547B;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.leftShort p b{
+    color:#000;
+}
+.rightShort{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color:#140342;
+    display:flex;
+    align-items:center;
+}
+.rightShort select{
+    background-color: #EEF2F6;
+    color: #4F547B;
+    border-radius: 8px;
+    display: inline-flex;
+    padding: 10px 15px;
+    align-items: flex-start;
+    margin-left: 12px;
+}
+.cardMainDetails{
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+}
+.innerCardDta{
+    width:33%;
+    padding:15px;
+    box-sizing:border-box;
+}
+.cardpart{
+    width:100%;
+    display:inline-block;
+}
+.imagesData{
+    width:100%;
+    display:inline-block;
+    position: relative;
+}
+.imagesData img{
+   max-width:100%;
+   border-radius:6px;
+}
+.popularBtn{
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    color: #fff;
+    line-height: normal;
+    display: inline-flex;
+    padding: 9px 17px 9px 17px;
+    align-items: center;
+    background-color: #6440FB;
+    border: none;
+    border-radius: 60px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+}
+.bestBtn{
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    color: #000;
+    line-height: normal;
+    display: inline-flex;
+    padding: 9px 17px 9px 17px;
+    align-items: center;
+    background-color: #00FF84;
+    border: none;
+    border-radius: 60px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+.ratingInfo{
+    width:100%;
+    display:flex;
+    align-items:center;
+    margin:10px 0px;
+}
+.ratingInfo .text{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #E59819;
+}
+.ratingInfo img{
+    max-width:78px;
+    margin:0px 10px;
+}
+.ratingInfo .year{
+    font-size: 13px;
+    color:#4F547B;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.cardpart h5{
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    text-transform: capitalize;
+    color:#140342;
+}
+.leassonIcon{
+    width:100%;
+    display:flex;
+    align-items:center;
+    padding:10px 0px;
+    border-bottom:1px solid #EDEDED;
+    margin-bottom:5px;
+}
+.leftLessionIcon{
+    display:flex;
+    align-items:center;
+    margin-right:15px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color:#4F547B;
+}
+.leftLessionIcon img{
+    margin-right:10px;
+}
+.priceData{
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.leftPrice{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color:#4F547B;
+    display: flex;
+    align-items: center;
+}
+.leftPrice img{
+    max-width:20px;
+    margin-right:10px;
+}
+.rightPrice strike{
+    text-align: right;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: strikethrough;
+    margin-right:5px;
+}
+.rightPrice b{
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: right;
+    color:#140342;
+}
