@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
+  // will store user in localstorage 
   user: null,
   loading: false,
 };
