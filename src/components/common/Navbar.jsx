@@ -27,7 +27,7 @@ const Navbar = () => {
         </Link>
         <Link to="/">
           <h2 className="text-white font-[700] text-[18px] font-walsheimCon leading-normal">
-            Educrat
+            Uniemtech
           </h2>
         </Link>
         <div className="hidden lg:flex flex-row pl-[40px]  items-center gap-4">
