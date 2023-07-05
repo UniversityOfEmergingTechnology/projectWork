@@ -322,6 +322,9 @@ const CoursesPage = () => {
           </div>
         </div>
       </div>
+      <div className="py-[100px] px-[50px] lg:px-[100px]  bg-black text-white">
+        <Footer/>
+      </div>
     </div>
   );
 };
