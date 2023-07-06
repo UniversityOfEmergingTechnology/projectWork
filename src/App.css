@@ -8,3 +8,13 @@
 .lable-style {
   @apply text-[16px] text-[#140342] font-walsheimCon;
 }
+.yellowButton {
+  @apply cursor-pointer rounded-md bg-yellow-50 px-[20px] py-[8px] font-semibold text-richblack-900;
+}
+.swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+.blackButton {
+  @apply cursor-pointer rounded-md bg-richblack-800 px-[20px] py-[8px] font-semibold text-richblack-5;
+}

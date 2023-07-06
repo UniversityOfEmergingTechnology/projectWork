@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-// import RatingStars from '../../common/RatingStars'
+import RatingStars from '../common/RatingStars'
 import GetAvgRating from "../../utils/avgRating";
 import { Link } from "react-router-dom";
 
@@ -27,13 +27,13 @@ const Course_Card = ({ course, Height }) => {
             <p className="text-sm text-black">
               {course?.instructor?.firstName} {course?.instructor?.lastName}
             </p>
-            {/* <div className="flex items-center gap-2">
-              <span className="text-yellow-5">{avgReviewCount || 0}</span>
+            <div className="flex items-center gap-2">
+              <span className="text-yellow-600">{avgReviewCount || 0}</span>
               <RatingStars Review_Count={avgReviewCount} />
               <span className="text-richblack-400">
                 {course?.ratingAndReviews?.length} Ratings
               </span>
-            </div> */}
+            </div>
             <p className="text-xl text-richblack-800">Rs. {course?.price}</p>
           </div>
         </div>
