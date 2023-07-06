@@ -1,18 +1,37 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../../assets/logo.svg";
 import Search from "../../assets/Search.jsx";
 import Sidebar from "../../assets/Sidebar.jsx";
 import Basket from "../../assets/Basket.jsx";
 import Vector from "../../assets/Vector.jsx";
-import { Link } from "react-router-dom";
+import { Link, useLocation} from "react-router-dom";
+import { categories } from "../../services/apis";
 import { useSelector } from "react-redux";
 import ProfileDropDown from "../Auth/ProfileDropDown";
+import { apiConnector } from "../../services/apiconnector";
 
 const Navbar = ({ theme }) => {
   // fetching current state from the slice
   const { token } = useSelector((state) => state.auth);
   const { user } = useSelector((state) => state.profile);
   const { totalItems } = useSelector((state) => state.cart);
+  const location = useLocation();
+
+  const [subLinks, setSubLinks] = useState([]);
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    (async () => {
+      setLoading(true);
+      try {
+        const res = await apiConnector("GET", categories.CATEGORIES_API);
+        setSubLinks(res.data.data);
+        console.log(res);
+      } catch (error) {
+        console.log("Could not fetch Categories.", error);
+      }
+      setLoading(false);
+    })();
+  }, []);
   // bg-[#1A064F]
   return (
     <div
@@ -78,9 +97,35 @@ const Navbar = ({ theme }) => {
           {/* <img src={Vector}  alt="Vector" /> */}
           <Vector color={`${theme === "dark" ? "white" : "black"}`} />
         </div>
-        <div className="flex flex-row cursor-pointer gap-[0.5rem] items-center">
-          <div className="text-[15px]">Courses</div>
+        <div className="flex flex-row cursor-pointer group relative gap-[0.5rem] items-center">
+          <div className="text-[15px]">Categories</div>
           <Vector color={`${theme === "dark" ? "white" : "black"}`} />
+
+          <div className="invisible absolute left-[50%] top-[50%] z-[1000] flex w-[200px] translate-x-[-50%] translate-y-[3em] flex-col rounded-lg bg-richblack-5 p-4 text-richblack-900 opacity-0 transition-all duration-150 group-hover:visible group-hover:translate-y-[1.65em] group-hover:opacity-100 lg:w-[300px]">
+            <div className="absolute left-[50%] top-0 -z-10 h-6 w-6 translate-x-[80%] translate-y-[-40%] rotate-45 select-none rounded bg-richblack-5"></div>
+            {loading ? (
+              <p className="text-center">Loading...</p>
+            ) : subLinks.length ? (
+              <>
+                {subLinks
+                  ?.filter((subLink) => subLink?.courses?.length > 0)
+                  ?.map((subLink, i) => (
+                    <Link
+                      to={`/catalog/${subLink.name
+                        .split(" ")
+                        .join("-")
+                        .toLowerCase()}`}
+                      className="rounded-lg bg-transparent py-4 pl-4 hover:bg-richblack-50"
+                      key={i}
+                    >
+                      <p>{subLink.name}</p>
+                    </Link>
+                  ))}
+              </>
+            ) : (
+              <p className="text-center">No Courses Found</p>
+            )}
+          </div>
         </div>
         <div className="flex flex-row cursor-pointer gap-[0.5rem] items-center">
           <div className="text-[15px] ">Events</div>
@@ -134,7 +179,9 @@ const Navbar = ({ theme }) => {
           <Link to="/signup" className="lg:block hidden">
             <div
               className={` w-[120px] hidden lg:flex h-[40px]  flex-row items-center justify-center rounded-[8px]
-            ${theme === "dark" ? "text-black bg-white " : "text-white bg-black"}`}
+            ${
+              theme === "dark" ? "text-black bg-white " : "text-white bg-black"
+            }`}
             >
               <button className="text-[15px] font-walsheimCon leading-[26px] ">
                 Sign Up

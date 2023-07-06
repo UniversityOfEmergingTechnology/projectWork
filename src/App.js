@@ -15,6 +15,7 @@ import MyCourses from "./components/Dashboard/MyCourses";
 import EditCourse from "./components/Dashboard/EditCourse";
 import Instructor from './components/Dashboard/InstructorDashboard/Instructor'
 import EnrolledCourses from "./components/Dashboard/EnrolledCourses";
+import Catalog from "./pages/Catalog";
 
 import OpenRoute from "./components/Auth/OpenRoute";
 import PrivateRoute from "./components/Auth/PrivateRoute";
@@ -31,6 +32,8 @@ function App() {
     <div>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="catalog/:catalogName" element={<Catalog/>} />
+         {/* <Route path="courses/:courseId" element={<CourseDetails/>} /> */}
         <Route
           path="/login"
           element={
