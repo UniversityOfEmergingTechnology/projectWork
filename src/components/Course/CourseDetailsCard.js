@@ -45,8 +45,9 @@ function CourseDetailsCard({ course, setConfirmationModal, handleBuyCourse }) {
       btn2Handler: () => setConfirmationModal(null),
     })
   }
-
+ 
   // console.log("Student already enrolled ", course?.studentsEnroled, user?._id)
+
 
   return (
     <>

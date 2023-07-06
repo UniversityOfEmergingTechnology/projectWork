@@ -27,7 +27,7 @@ app.use(
 		credentials:true,
 	})
 )
-
+app.use(express.static("public"));
 app.use(
 	fileUpload({
 		useTempFiles:true,

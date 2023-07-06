@@ -24,17 +24,22 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { ACCOUNT_TYPE } from "./utils/constants";
 
+
+
 function App() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   
+  
   const { user } = useSelector((state) => state.profile)
   return (
+
     <div>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="catalog/:catalogName" element={<Catalog/>} />
-         <Route path="courses/:courseId" element={<CourseDetails/>} />
+        <Route path="courses/:courseId" element={<CourseDetails/>} />
+
         <Route
           path="/login"
           element={
