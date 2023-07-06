@@ -33,8 +33,8 @@ export default function EnrolledCourses() {
         <div className="grid min-h-[calc(100vh-3.5rem)] place-items-center">
           <div className="spinner"></div>
         </div>
-      ) : !enrolledCourses.length ? (
-        <p className="grid h-[10vh] w-full place-content-center text-richblack-5">
+      ) : !enrolledCourses.length  ? (
+        <p className="grid h-[10vh] w-full place-content-center text-richblack-800">
           You have not enrolled in any course yet.
           {/* TODO: Modify this Empty State */}
         </p>
