@@ -5,6 +5,7 @@ import {
   useStripe,
   useElements,
   CardElement,
+  PaymentRequestButtonElement,
 } from "@stripe/react-stripe-js";
 import { toast } from "react-hot-toast";
 import {
@@ -21,40 +22,61 @@ export default function CheckoutForm({ formData, token, dispatch, navigate }) {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [paymentRequest, setPaymentRequest] = useState(null);
 
+  // useEffect(() => {
+  //   if (!stripe) {
+  //     return;
+  //   }
+
+  //   const clientSecret = new URLSearchParams(window.location.search).get(
+  //     "payment_intent_client_secret"
+  //   );
+
+  //   if (!clientSecret) {
+  //     return;
+  //   }
+
+  //   stripe.retrievePaymentIntent(clientSecret).then(({ paymentIntent }) => {
+  //     switch (paymentIntent.status) {
+  //       case "succeeded":
+  //         setMessage("Payment succeeded!");
+  //         break;
+  //       case "processing":
+  //         setMessage("Your payment is processing.");
+  //         break;
+  //       case "requires_payment_method":
+  //         setMessage("Your payment was not successful, please try again.");
+  //         break;
+  //       default:
+  //         setMessage("Something went wrong.");
+  //         break;
+  //     }
+  //   });
+  //   console.log(message);
+  // }, [stripe]);
   useEffect(() => {
-    if (!stripe) {
-      return;
+    if (stripe) {
+      const pr = stripe.paymentRequest({
+        country: 'US', // TODO: replace with your country code
+        currency: 'usd', // TODO: replace with your currency
+        total: {
+          label: 'Demo total',
+          amount: amount, // TODO: replace with your amount in smallest currency unit (e.g., cents)
+        },
+        requestPayerName: true,
+        requestPayerEmail: true,
+      });
+
+      pr.canMakePayment().then((result) => {
+        if (result) {
+          setPaymentRequest(pr);
+        }
+      });
     }
-
-    const clientSecret = new URLSearchParams(window.location.search).get(
-      "payment_intent_client_secret"
-    );
-
-    if (!clientSecret) {
-      return;
-    }
-
-    stripe.retrievePaymentIntent(clientSecret).then(({ paymentIntent }) => {
-      switch (paymentIntent.status) {
-        case "succeeded":
-          setMessage("Payment succeeded!");
-          break;
-        case "processing":
-          setMessage("Your payment is processing.");
-          break;
-        case "requires_payment_method":
-          setMessage("Your payment was not successful, please try again.");
-          break;
-        default:
-          setMessage("Something went wrong.");
-          break;
-      }
-    });
-    console.log(message);
   }, [stripe]);
 
-  // const handleSubmit = async (e) => {
+
   //   e.preventDefault();
 
   //   if (!stripe || !elements) {
@@ -172,8 +194,14 @@ export default function CheckoutForm({ formData, token, dispatch, navigate }) {
           placeholder="Email Address"
           value={email}
         />
+        {paymentRequest && (
+          <div>
+            <PaymentRequestButtonElement options={{ paymentRequest }} />
+            <p>Or pay with your credit card:</p>
+          </div>
+        )}
+        <CardElement id="card-element" options={CARD_ELEMENT_OPTIONS} />
 
-        <CardElement id="card-element" options={CARD_ELEMENT_OPTIONS }/>
         <button
           disabled={isLoading || !stripe || !elements}
           className="paymentButton"
@@ -181,13 +209,13 @@ export default function CheckoutForm({ formData, token, dispatch, navigate }) {
         >
           <span id="button-text">
             {isLoading ? (
-              <div class="sk-chase">
-                <div class="sk-chase-dot"></div>
-                <div class="sk-chase-dot"></div>
-                <div class="sk-chase-dot"></div>
-                <div class="sk-chase-dot"></div>
-                <div class="sk-chase-dot"></div>
-                <div class="sk-chase-dot"></div>
+              <div className="sk-chase">
+                <div className="sk-chase-dot"></div>
+                <div className="sk-chase-dot"></div>
+                <div className="sk-chase-dot"></div>
+                <div className="sk-chase-dot"></div>
+                <div className="sk-chase-dot"></div>
+                <div className="sk-chase-dot"></div>
               </div>
             ) : (
               "Pay now"
