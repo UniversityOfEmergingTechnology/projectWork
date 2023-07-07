@@ -17,6 +17,8 @@ import Instructor from './components/Dashboard/InstructorDashboard/Instructor'
 import EnrolledCourses from "./components/Dashboard/EnrolledCourses";
 import Catalog from "./pages/Catalog";
 import CourseDetails from './pages/CourseDetails'
+import VideoDetails from './components/Dashboard/ViewCourse/VideoDetails'
+import ViewCourse from './pages/ViewCourse'
 
 import OpenRoute from "./components/Auth/OpenRoute";
 import PrivateRoute from "./components/Auth/PrivateRoute";
@@ -111,6 +113,24 @@ function App() {
           </>
         )
       }
+      <Route element={
+        <PrivateRoute>
+          <ViewCourse />
+        </PrivateRoute>
+      }>
+
+      {
+        user?.accountType === ACCOUNT_TYPE.STUDENT && (
+          <>
+          <Route 
+            path="view-course/:courseId/section/:sectionId/sub-section/:subSectionId"
+            element={<VideoDetails />}
+          />
+          </>
+        )
+      }
+
+      </Route>
         </Route>
 
         <Route path="*" element={<Error />} />
