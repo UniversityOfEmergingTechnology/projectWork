@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Outlet, useParams } from "react-router-dom";
-
+import Navbar from "../components/common/Navbar";
 import CourseReviewModal from "../components/Dashboard/ViewCourse/CourseReviewModal";
 import VideoDetailsSidebar from "../components/Dashboard/ViewCourse/VideoDetailsSidebar";
 import { getFullDetailsOfCourse } from "../services/operations/courseDetailsAPI";
@@ -36,10 +36,11 @@ export default function ViewCourse() {
 
   return (
     <>
-      <div className="relative flex gap-5 min-h-[calc(100vh-3.5rem)]">
+    <Navbar theme={'dark'}/>
+      <div className="relative bg-black flex gap-5 h-[100%]">
         <VideoDetailsSidebar setReviewModal={setReviewModal} />
-        <div className="h-[calc(100vh-3.5rem)] flex-1 overflow-auto">
-          <div className="mx-6">
+        <div className="min-h-[calc(100vh-3.5rem)]  w-[70%] overflow-auto">
+          <div className="mx-4">
             <Outlet />
           </div>
         </div>

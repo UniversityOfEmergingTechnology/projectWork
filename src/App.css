@@ -18,3 +18,9 @@
 .blackButton {
   @apply cursor-pointer rounded-md bg-richblack-800 px-[20px] py-[8px] font-semibold text-richblack-5;
 }
+.overflow-y-auto {
+  scrollbar-width: none;
+}
+.overflow-y-auto::-webkit-scrollbar {
+  display: none;
+}

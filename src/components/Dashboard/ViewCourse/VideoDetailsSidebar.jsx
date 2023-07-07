@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { BsChevronDown } from "react-icons/bs";
+import { BsChevronDown, BsChevronUp } from "react-icons/bs";
 import { IoIosArrowBack } from "react-icons/io";
 import { useSelector } from "react-redux";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
@@ -40,14 +40,14 @@ export default function VideoDetailsSidebar({ setReviewModal }) {
 
   return (
     <>
-      <div className="flex h-[calc(100vh-3.5rem)] border-[0.5px] p-5 w-[380px] max-w-[380px] flex-col  bg-white">
-        <div className=" flex flex-col items-start justify-between gap-2 gap-y-4 border-b border-richblack-600 py-5 text-lg font-bold text-darkblue">
+      <div className="flex h-[calc(100vh-3.5rem)] border-[0.5px] p-4 w-[400px] max-w-[400px] flex-col  bg-black borde-r-[2px] border-r-white  ">
+        <div className=" flex flex-col items-start justify-between gap-2 gap-y-4 border-b border-richblack-600 py-5 text-lg font-bold text-white font-">
           <div className="flex w-full items-center justify-between ">
             <div
               onClick={() => {
                 navigate(`/dashboard/enrolled-courses`);
               }}
-              className="flex h-[35px] w-[35px] items-center justify-center rounded-full bg-richblack-100 p-1 cursor-pointer  text-richblack-700 hover:scale-90"
+              className="flex h-[35px] w-[35px] items-center justify-center rounded-full bg-white p-1 cursor-pointer  text-richblack-700 hover:scale-90 transition-all duration-500"
               title="back"
             >
               <IoIosArrowBack size={30} />
@@ -60,7 +60,7 @@ export default function VideoDetailsSidebar({ setReviewModal }) {
           </div>
           <div className="flex flex-col">
             <p>{courseEntireData?.courseName}</p>
-            <p className="text-sm font-semibold text-richblack-500">
+            <p className="text-sm font-semibold text-white font-walsheimCon">
               {completedLectures?.length} / {totalNoOfLectures}
             </p>
           </div>
@@ -74,8 +74,8 @@ export default function VideoDetailsSidebar({ setReviewModal }) {
               key={index}
             >
               {/* Section */}
-              <div className="flex flex-row justify-between bg-white text-darkblue   py-4">
-                <div className="w-[70%] font-semibold font-walsheimMed">
+              <div className="flex flex-row justify-between  text-darkblue   py-4">
+                <div className="w-[70%]  text-white font-walsheimCon font-[700]">
                   {course?.sectionName}
                 </div>
                 <div className="flex items-center gap-3">
@@ -84,10 +84,8 @@ export default function VideoDetailsSidebar({ setReviewModal }) {
                   </span> */}
                   <span
                     className={`${
-                      activeStatus === course?.sectionName
-                        ? "rotate-0"
-                        : "rotate-180"
-                    } transition-all duration-500`}
+                      activeStatus === course?._id ? "rotate-0" : "rotate-180"
+                    } transition-all duration-500  text-white`}
                   >
                     <BsChevronDown />
                   </span>
@@ -96,14 +94,14 @@ export default function VideoDetailsSidebar({ setReviewModal }) {
 
               {/* Sub Sections */}
               {activeStatus === course?._id && (
-                <div className="transition-[height] duration-500 ease-in-out">
+                <div className="transition-[max-height] overflow-y-auto duration-500 ease-in-out">
                   {course.subSection.map((topic, i) => (
                     <div
                       className={`flex gap-3  px-5 py-2 ${
                         videoBarActive === topic._id
-                          ? "bg-richblack-900 font-semibold text-white"
-                          : "hover:bg-richblack-900 hover:text-white text-black"
-                      } `}
+                          ? "bg-white font-walsheimReg font-semibold text-black rounded-xl"
+                          : "hover:text-teal text-white"
+                      } transition-all duration-700 `}
                       key={i}
                       onClick={() => {
                         navigate(

@@ -192,7 +192,7 @@ const VideoDetails = () => {
   }
 
   return (
-    <div className="flex flex-col  gap-5 text-white">
+    <div className="flex flex-col py-5  gap-5 text-white">
       {!videoData ? (
         <img
           src={previewSource}
@@ -262,8 +262,8 @@ const VideoDetails = () => {
         </Player>
       )}
 
-      <h1 className="mt-4 text-3xl font-semibold text-darkblue font-walsheim">{videoData?.title}</h1>
-      <p className="pt-2 pb-6 text-darkblue text-justify font-walsheimReg">{videoData?.description}</p>
+      <h1 className="mt-4 text-3xl font-semibold text-white font-walsheim">{videoData?.title}</h1>
+      <p className="pt-2 pb-6 text-richblack-200 text-justify font-walsheimReg">{videoData?.description}</p>
     </div>
   )
 }
