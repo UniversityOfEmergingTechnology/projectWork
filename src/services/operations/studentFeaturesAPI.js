@@ -30,10 +30,12 @@ export async function buyCourse(
         Authorization: `Bearer ${token}`,
       }
     );
+    console.log("PRINTING orderResponse", orderResponse);
     if (!orderResponse.data.success) {
       throw new Error(orderResponse.data.message);
+
     }
-    console.log("PRINTING orderResponse", orderResponse);
+
     toast.dismiss(toastId);
     //send successful wala mail
     const formData = {
@@ -46,7 +48,11 @@ export async function buyCourse(
     return formData;
     //verifyPayment
   } catch (error) {
+    if(error.response.data.message === "This is a Protected Route for Students"){
+      toast.error("Instructor cannot buy courses")
+    }
     console.log("PAYMENT API ERROR.....", error);
+    toast.dismiss(toastId);
     toast.error("Could not make Payment");
   }
 }

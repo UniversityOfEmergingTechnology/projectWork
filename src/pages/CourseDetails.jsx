@@ -131,9 +131,14 @@ function CourseDetails() {
         navigate,
         dispatch
       );
-      console.log("Response recieved in component", response);
-      setClientSecret(response.clientSecret);
-      setFormData(response)
+      if(response === undefined){
+        console.log(response)
+      }else{
+        console.log("Response recieved in component", response);
+        setClientSecret(response.clientSecret);
+        setFormData(response)
+      }
+
       return;
     }
     setConfirmationModal({
