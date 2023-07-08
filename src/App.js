@@ -27,6 +27,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { ACCOUNT_TYPE } from "./utils/constants";
 import TermsAndConditions from "./pages/TermsAndConditions";
+import ContactUs from "./pages/ContactUs";
 
 function App() {
   const dispatch = useDispatch();
@@ -85,6 +86,14 @@ function App() {
           element={
             <OpenRoute>
               <TermsAndConditions />
+            </OpenRoute>
+          }
+        />
+        <Route
+          path="/contact-us"
+          element={
+            <OpenRoute>
+              <ContactUs />
             </OpenRoute>
           }
         />

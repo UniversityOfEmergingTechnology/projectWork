@@ -6,6 +6,7 @@
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@ramonak/react-progress-bar": "^5.0.3",
+    "@react-google-maps/api": "^2.18.1",
     "@reduxjs/toolkit": "^1.9.5",
     "@stripe/react-stripe-js": "^2.1.1",
     "@stripe/stripe-js": "^1.54.1",
@@ -31,6 +32,7 @@
     "react-scripts": "5.0.1",
     "react-slick": "^0.29.0",
     "react-super-responsive-table": "^5.2.1",
+    "react-transition-group": "^4.4.5",
     "react-visibility-sensor": "^5.1.1",
     "slick-carousel": "^1.8.1",
     "swiper": "^9.4.1",
