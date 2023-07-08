@@ -26,6 +26,7 @@ import PrivateRoute from "./components/Auth/PrivateRoute";
 import { useDispatch, useSelector } from "react-redux";
 
 import { ACCOUNT_TYPE } from "./utils/constants";
+import TermsAndConditions from "./pages/TermsAndConditions";
 
 function App() {
   const dispatch = useDispatch();
@@ -76,6 +77,14 @@ function App() {
           element={
             <OpenRoute>
               <UpdatePassword />
+            </OpenRoute>
+          }
+        />
+        <Route
+          path="/terms-conditions"
+          element={
+            <OpenRoute>
+              <TermsAndConditions />
             </OpenRoute>
           }
         />
