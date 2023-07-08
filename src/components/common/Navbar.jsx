@@ -4,7 +4,7 @@ import Search from "../../assets/Search.jsx";
 import Sidebar from "../../assets/Sidebar.jsx";
 import Basket from "../../assets/Basket.jsx";
 import Vector from "../../assets/Vector.jsx";
-import { Link, useLocation} from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { categories } from "../../services/apis";
 import { useSelector } from "react-redux";
 import ProfileDropDown from "../Auth/ProfileDropDown";
@@ -156,7 +156,11 @@ const Navbar = ({ theme }) => {
               className="w-[20px] h-[20px]"
               color={`${theme === "dark" ? "white" : "black"}`}
             />
-            {totalItems > 0 && <span>{totalItems}</span>}
+            {totalItems > 0 && (
+              <span className="flex items-center justify-center w-6 h-6 absolute -top-3 -right-[9.5px] bg-black text-white rounded-full text-[12px] animate-bounce">
+                {totalItems}
+              </span>
+            )}
           </Link>
         )}
         <Sidebar

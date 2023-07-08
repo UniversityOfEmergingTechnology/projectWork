@@ -19,6 +19,7 @@ import Catalog from "./pages/Catalog";
 import CourseDetails from "./pages/CourseDetails";
 import VideoDetails from "./components/Dashboard/ViewCourse/VideoDetails";
 import ViewCourse from "./pages/ViewCourse";
+import Cart from "./components/Dashboard/Cart/index";
 
 import OpenRoute from "./components/Auth/OpenRoute";
 import PrivateRoute from "./components/Auth/PrivateRoute";
@@ -91,7 +92,7 @@ function App() {
 
           {user?.accountType === ACCOUNT_TYPE.STUDENT && (
             <>
-              {/* <Route path="dashboard/cart" element={<Cart />} /> */}
+              <Route path="dashboard/cart" element={<Cart />} />
               <Route
                 path="dashboard/enrolled-courses"
                 element={<EnrolledCourses />}
@@ -110,7 +111,7 @@ function App() {
             </>
           )}
         </Route>
-        
+
         <Route
           element={
             <PrivateRoute>
