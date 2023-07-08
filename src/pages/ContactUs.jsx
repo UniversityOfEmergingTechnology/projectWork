@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "../components/common/Navbar";
 import Footer from "../components/common/Footer";
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
@@ -8,6 +8,10 @@ import mail from "../assets/contact-us/mail.svg";
 import phone from "../assets/phone2.png";
 import { FiPlusCircle, FiMinusCircle } from "react-icons/fi";
 import FAQItem from "../components/Contact/FAQItem.jsx";
+import { apiConnector } from "../services/apiconnector";
+import { contactusEndpoint } from "../services/apis";
+import { useForm } from "react-hook-form";
+import {toast} from 'react-hot-toast'
 
 const faqData = [
   {
@@ -65,6 +69,41 @@ const ContactUs = () => {
   //   AIzaSyAbDLor5DBBfrNKD0FmiRR8PU1zeSPoD6E
 
   const [selectedQuestion, setSelectedQuestion] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors, isSubmitSuccessful },
+  } = useForm();
+  const submitContactForm = async (data) => {
+    const toastId = toast.loading("Loading...")
+    try {
+      setLoading(true);
+      const res = await apiConnector(
+        "POST",
+        contactusEndpoint.CONTACT_US_API,
+        data
+      );
+      console.log("Email Res - ", res)
+      setLoading(false);
+      toast.success('Your feedback has been sent successfully')
+    } catch (error) {
+      console.log("ERROR MESSAGE - ", error.message);
+      setLoading(false);
+      toast.error('Not able to send your feedback')
+    }
+    toast.dismiss(toastId)
+  };
+  useEffect(() => {
+    if (isSubmitSuccessful) {
+      reset({
+        email: "",
+        name: "",
+        message: "",
+      });
+    }
+  }, [reset, isSubmitSuccessful]);
   return (
     <>
       <Navbar theme={"dark"} />
@@ -110,7 +149,10 @@ const ContactUs = () => {
               Neque convallis a cras semper auctor. Libero id <br />
               faucibus nisl tincidunt egetnvallis.
             </p>
-            <form className="flex flex-col mt-[80px] gap-[50px]">
+            <form
+              onSubmit={handleSubmit(submitContactForm)}
+              className="flex flex-col mt-[80px] gap-[50px]"
+            >
               <div className="flex flex-row gap-[20px]">
                 <div className="flex flex-col gap-[10px]">
                   <label htmlFor="name" className="lable-style">
@@ -122,7 +164,13 @@ const ContactUs = () => {
                     type="text"
                     name="name"
                     id="name"
+                    {...register("name", { required: true })}
                   />
+                  {errors.name && (
+                    <span className="-mt-1 text-[12px] text-yellow-100">
+                      Please enter your name.
+                    </span>
+                  )}
                 </div>
                 <div className="flex flex-col gap-[10px]">
                   <label htmlFor="email" className="lable-style">
@@ -134,7 +182,13 @@ const ContactUs = () => {
                     className="border-[1px] font-walsheimReg text-darkblue w-[300px] p-3 h-[35px] border-[#DDD]"
                     name="email"
                     id="email"
+                    {...register("email", { required: true })}
                   />
+                  {errors.email && (
+                    <span className="-mt-1 text-[12px] text-yellow-100">
+                      Please enter your Email address.
+                    </span>
+                  )}
                 </div>
               </div>
               <div className="flex flex-col gap-[10px]">
@@ -147,12 +201,25 @@ const ContactUs = () => {
                   className="border-[1px] font-walsheimReg text-darkblue p-3 border-[#DDD]"
                   rows={7}
                   cols={30}
-                ></textarea>
+                  {...register("message", { required: true })}
+                />
+                {errors.message && (
+                  <span className="-mt-1 text-[12px] text-yellow-100">
+                    Please enter your Message.
+                  </span>
+                )}
               </div>
 
               <button
+                disabled={loading}
                 type="submit"
-                className="self-start px-[55px] py-[21px] text-white bg-[#6440FB] font-walsheimCon duration-300 hover:scale-90 rounded-lg"
+                className={`self-start px-[55px] py-[21px]
+                ${
+                  !loading &&
+                  "transition-all duration-200 hover:scale-95 hover:shadow-none"
+                } 
+                 text-white bg-[#6440FB] font-walsheimCon duration-300 hover:scale-90 rounded-lg
+              `}
               >
                 Send Message
               </button>
