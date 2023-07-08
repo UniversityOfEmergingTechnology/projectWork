@@ -10,6 +10,25 @@ import { useSelector } from "react-redux";
 import ProfileDropDown from "../Auth/ProfileDropDown";
 import { apiConnector } from "../../services/apiconnector";
 
+const pages = [
+  {
+    name: "Home",
+    path: "/",
+  },
+  {
+    name: "Login",
+    path: "/login",
+  },
+  {
+    name: "Signup",
+    path: "/signup",
+  },
+  {
+    name: "Contact Us",
+    path: "/contact-us",
+  },
+];
+
 const Navbar = ({ theme }) => {
   // fetching current state from the slice
   const { token } = useSelector((state) => state.auth);
@@ -93,9 +112,10 @@ const Navbar = ({ theme }) => {
         } `}
       >
         <div className="flex flex-row cursor-pointer gap-[0.5rem] items-center">
-          <div className="text-[15px] ">Home</div>
+          <Link to="/" className="text-[15px] ">
+            Home
+          </Link>
           {/* <img src={Vector}  alt="Vector" /> */}
-          <Vector color={`${theme === "dark" ? "white" : "black"}`} />
         </div>
         <div className="flex flex-row cursor-pointer group relative gap-[0.5rem] items-center">
           <div className="text-[15px]">Categories</div>
@@ -118,7 +138,7 @@ const Navbar = ({ theme }) => {
                       className="rounded-lg bg-transparent py-4 pl-4 hover:bg-richblack-50"
                       key={i}
                     >
-                      <p>{subLink.name}</p>
+                      <p className="font-walsheimMed font-[400] text-darkblue">{subLink.name}</p>
                     </Link>
                   ))}
               </>
@@ -127,20 +147,36 @@ const Navbar = ({ theme }) => {
             )}
           </div>
         </div>
-        <div className="flex flex-row cursor-pointer gap-[0.5rem] items-center">
+        <div className="flex flex-row cursor-pointer relative group gap-[0.5rem] items-center">
           <div className="text-[15px] ">Events</div>
           <Vector color={`${theme === "dark" ? "white" : "black"}`} />
+          <div className="invisible absolute left-[50%] top-[50%] z-[1000] flex w-[200px] translate-x-[-50%] translate-y-[3em] flex-col rounded-lg bg-white p-4 text-richblack-900 opacity-0 transition-all duration-150 group-hover:visible group-hover:translate-y-[1.65em] group-hover:opacity-100 lg:w-[300px]">
+            <div className="absolute left-[50%] top-0 -z-10 h-6 w-6 translate-x-[80%] translate-y-[-40%] rotate-45 select-none rounded bg-white"></div>
+            <p className="rounded-lg text-center  bg-transparent py-4  text-darkblue font-walsheimCon">Coming Soon....</p>
+          </div>
         </div>
         <div className="flex flex-row cursor-pointer gap-[0.5rem] items-center">
           <div className="text-[15px]">Blog</div>
-          <Vector color={`${theme === "dark" ? "white" : "black"}`} />
         </div>
-        <div className="flex flex-row cursor-pointer gap-[0.5rem] items-center">
+        <div className="flex flex-row cursor-pointer group relative gap-[0.5rem] items-center">
           <div className="text-[15px]">Pages</div>
           <Vector color={`${theme === "dark" ? "white" : "black"}`} />
+          <div className="invisible absolute left-[50%] top-[50%] z-[1000] flex w-[200px] translate-x-[-50%] translate-y-[3em] flex-col rounded-lg bg-richblack-5 p-4 text-richblack-900 opacity-0 transition-all duration-150 group-hover:visible group-hover:translate-y-[1.65em] group-hover:opacity-100 lg:w-[300px]">
+            <div className="absolute left-[50%] top-0 -z-10 h-6 w-6 translate-x-[80%] translate-y-[-40%] rotate-45 select-none rounded bg-richblack-5"></div>
+            {pages.map((page) => (
+              <Link
+                to={page.path}
+                className="rounded-lg font-walsheimMed font-[400] text-darkblue bg-transparent py-4 pl-4 hover:bg-richblack-50"
+              >
+                {page.name}
+              </Link>
+            ))}
+          </div>
         </div>
         <div className="flex flex-row cursor-pointer items-center">
-          <div className="text-[15px] ">Contact</div>
+          <Link to="/contact-us" className="text-[15px] ">
+            Contact
+          </Link>
         </div>
       </div>
 
