@@ -16,6 +16,7 @@ const Catalog = () => {
   const [active, setActive] = useState(1);
   const [catalogPageData, setCatalogPageData] = useState(null);
   const [categoryId, setCategoryId] = useState("");
+  const [filter, setFilter] = useState(null);
 
   //Fetch all categories
   useEffect(() => {
@@ -55,6 +56,30 @@ const Catalog = () => {
   if (!loading && !catalogPageData.success) {
     return <Error />;
   }
+  // ... other state variables and functions ...
+
+
+
+  // Get the courses array and apply the filter to it
+  let filteredCourses = [...catalogPageData?.data?.selectedCategory?.courses];
+
+  switch (filter) {
+    case "Price Ascending":
+      filteredCourses.sort((a, b) => a.price - b.price);
+      break;
+    case "Price Descending":
+      filteredCourses.sort((a, b) => b.price - a.price);
+      break;
+    case "Name Ascending":
+      filteredCourses.sort((a, b) => a.courseName.localeCompare(b.courseName));
+      break;
+    case "Name Descending":
+      filteredCourses.sort((a, b) => b.courseName.localeCompare(a.courseName));
+      break;
+    default:
+      // No filter selected, or unknown filter, don't sort
+      break;
+  }
 
   return (
     <>
@@ -79,32 +104,47 @@ const Catalog = () => {
 
       {/* Section 1 */}
       <div className=" mx-auto box-content w-full max-w-maxContentTab px-4 py-12 lg:max-w-maxContent">
-        <div className="text-[30px] font-walsheimCon text-darkblue">Courses to get you started</div>
-        <div className="my-4 flex border-b border-b-richblack-600 text-sm">
-          <p
-            className={`px-4 py-2 ${
-              active === 1
-                ? "border-b border-b-darkblue text-darkblue"
-                : "text-richblack-50"
-            } cursor-pointer`}
-            onClick={() => setActive(1)}
-          >
-            Most Popular
-          </p>
-          <p
-            className={`px-4 py-2 ${
-              active === 2
-              ? "border-b border-b-darkblue text-darkblue"
-                : "text-richblack-50"
-            } cursor-pointer`}
-            onClick={() => setActive(2)}
-          >
-            New
-          </p>
+        <div className="text-[30px] font-walsheimCon text-darkblue">
+          Courses to get you started
         </div>
+        <div className="my-4 flex justify-between border-b border-b-richblack-600 text-sm">
+          <div className="flex flex-row">
+            <p
+              className={`px-4 py-2 ${
+                active === 1
+                  ? "border-b border-b-darkblue text-darkblue"
+                  : "text-richblack-50"
+              } cursor-pointer`}
+              onClick={() => setActive(1)}
+            >
+              Most Popular
+            </p>
+            <p
+              className={`px-4 py-2 ${
+                active === 2
+                  ? "border-b border-b-darkblue text-darkblue"
+                  : "text-richblack-50"
+              } cursor-pointer`}
+              onClick={() => setActive(2)}
+            >
+              New
+            </p>
+          </div>
+          {/* <button onClick={handleClick}>Filter</button> */}
+          <select onChange={(e) => setFilter(e.target.value)} className="px-[3px] rounded-[10px] py-[12px] gap-[20px] flex flex-col border-[1px] border-pure-greys-100 mb-2 cursor-pointer outline-none text-darkblue font-walsheimReg">
+            <option value="">Filter</option>
+            <option value="Price Ascending">Price Ascending</option>
+            <option value="Price Descending">Price Descending</option>
+            <option value="Name Ascending">Name Ascending</option>
+            <option value="Name Descending">Name Descending</option>
+          </select>
+        </div>
+
         <div>
           <CourseSlider
-            Courses={catalogPageData?.data?.selectedCategory?.courses}
+            // Courses={catalogPageData?.data?.selectedCategory?.courses}
+            Courses={filteredCourses}
+            filter={filteredCourses}
           />
         </div>
       </div>
@@ -122,7 +162,9 @@ const Catalog = () => {
 
       {/* Section 3 */}
       <div className=" mx-auto box-content w-full max-w-maxContentTab px-4 py-12 lg:max-w-maxContent">
-        <div className="text-[30px] font-walsheimCon text-darkblue">Frequently Bought</div>
+        <div className="text-[30px] font-walsheimCon text-darkblue">
+          Frequently Bought
+        </div>
         <div className="py-8">
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
             {catalogPageData?.data?.mostSellingCourses
@@ -135,7 +177,7 @@ const Catalog = () => {
       </div>
 
       <div className="py-[100px] px-[50px] lg:px-[100px]  bg-black text-white">
-        <Footer/>
+        <Footer />
       </div>
     </>
   );
