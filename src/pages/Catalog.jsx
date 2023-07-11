@@ -97,7 +97,7 @@ const Catalog = () => {
             {catalogPageData?.data?.selectedCategory?.name}
           </p>
           <p className="max-w-[870px] text-richblack-200">
-            {catalogPageData?.data?.selectedCategory?.description}
+            {(catalogPageData?.data?.selectedCategory?.description).substring(0, 300)}...
           </p>
         </div>
       </div>

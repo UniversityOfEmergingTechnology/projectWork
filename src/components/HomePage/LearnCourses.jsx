@@ -7,17 +7,17 @@ const learnCousesData = [
     {
         img : one,
         title : '01. Learn',
-        desc : "Lorem ipsum dolor sit amet, consectetur dolorili adipiscing elit. Felis donecmassa aliqua."
+        desc : "Gain the knowledge and skills necessary to learn, graduate, and excel in your chosen field."
     },
     {
         img : two,
         title : '02. Graduate',
-        desc : "Lorem ipsum dolor sit amet, consectetur dolorili adipiscing elit. Felis donecmassa aliqua."
+        desc : " Enhance your professional skills and gain a competitive edge in the job market."
     },
     {
         img : three,
         title : '03. Work',
-        desc : "Lorem ipsum dolor sit amet, consectetur dolorili adipiscing elit. Felis donecmassa aliqua."
+        desc : "Our courses are designed to equip you with industry-relevant knowledge and practical expertise."
     },
 ]
 
@@ -25,7 +25,7 @@ const LearnCourses = () => {
   return (
     <div className='w-[90%] mx-auto flex flex-col py-[80px] px-[50px]'>
         <h3 className='text-center text-[30px] font-walsheimCon leading-normal text-white'>Why Learn with our Courses?</h3>
-        <p className='text-center text-[15px] text-white leading-[26px] font-walsheimReg'>Lorem ipsum dolor sit amet, consectetur.</p>
+        <p className='text-center text-[15px] text-white leading-[26px] font-walsheimReg'> Learn, Graduate, Work.</p>
 
         <div className='flex flex-col gap-4 items-center xl:justify-between lg:flex-row  mt-10'>
             {

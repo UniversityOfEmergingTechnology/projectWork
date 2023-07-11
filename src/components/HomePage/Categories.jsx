@@ -87,7 +87,7 @@ const Categories = () => {
         Top Categories
       </h3>
       <p className="text-[15px] font-normal leading-[26px] font-walsheimReg text-center ">
-        Lorem ipsum dolor sit amet, consectetur.
+      Explore our Top Categories
       </p>
       {/* className="flex flex-row items-center justify-center gap-4" */}
       <Swiper

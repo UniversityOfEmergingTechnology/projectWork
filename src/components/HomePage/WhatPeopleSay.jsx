@@ -15,45 +15,52 @@ SwiperCore.use([Autoplay, Pagination, Navigation]);
 const peopleData = [
   {
     title: "Great Work",
-    desc: ` " I think Uniemtech is the best theme I ever seen this year. Amazing design, easy to customize and a design quality superlative account on its cloud platform for the optimized performance " `,
+    desc: ` " I think Uniemtech is the best theme I ever seen this year. Amazing design, easy to customize and a design quality superlative account on its cloud platform for the optimized performance. It was so satisfying I never found such content anywhere else." `,
     img: people,
     name: "Courtney Henry",
     post: "Web Designer",
   },
   {
-    title: "Great Work",
-    desc: ` " I think Uniemtech is the best theme I ever seen this year. Amazing design, easy to customize and a design quality superlative account on its cloud platform for the optimized performance " `,
+    title: "Excellent Experience",
+    desc: "Uniemtech has exceeded my expectations in every aspect. The user-friendly interface, extensive features, and exceptional customer support make it a top-notch platform for both beginners and professionals. Highly recommended!",
     img: people,
-    name: "Courtney Henry",
-    post: "Web Designer",
+    name: "Alexandra Smith",
+    post: "Digital Marketer",
   },
   {
-    title: "Great Work",
-    desc: ` " I think Uniemtech is the best theme I ever seen this year. Amazing design, easy to customize and a design quality superlative account on its cloud platform for the optimized performance " `,
+    title: "Impressive Platform",
+    desc: "Uniemtech offers an impressive platform with a seamless user experience. The wide range of courses, informative content, and interactive learning materials have greatly contributed to my professional development. Thank you, Uniemtech!",
     img: people,
-    name: "Courtney Henry",
-    post: "Web Designer",
+    name: "John Davis",
+    post: "Data Analyst",
   },
   {
-    title: "Great Work",
-    desc: ` " I think Uniemtech is the best theme I ever seen this year. Amazing design, easy to customize and a design quality superlative account on its cloud platform for the optimized performance " `,
+    title: "Game Changer",
+    desc: "Uniemtech has been a game changer for me. The comprehensive courses, knowledgeable instructors, and practical exercises have tremendously enhanced my skills and opened up new career opportunities. I can't recommend it enough!",
     img: people,
-    name: "Courtney Henry",
-    post: "Web Designer",
+    name: "Emily Johnson",
+    post: "Software Engineer",
   },
   {
-    title: "Great Work",
-    desc: ` " I think Uniemtech is the best theme I ever seen this year. Amazing design, easy to customize and a design quality superlative account on its cloud platform for the optimized performance " `,
+    title: "Exceptional Learning Platform",
+    desc: "Uniemtech provides an exceptional learning platform with high-quality courses and a supportive community. The interactive lessons, real-world projects, and valuable resources have made my learning journey enjoyable and rewarding.",
     img: people,
-    name: "Courtney Henry",
-    post: "Web Designer",
+    name: "Michael Thompson",
+    post: "Data Scientist",
   },
   {
-    title: "Great Work",
-    desc: ` " I think Uniemtech is the best theme I ever seen this year. Amazing design, easy to customize and a design quality superlative account on its cloud platform for the optimized performance " `,
+    title: "Game Changer",
+    desc: "Uniemtech has been a game changer for me. The comprehensive courses, knowledgeable instructors, and practical exercises have tremendously enhanced my skills and opened up new career opportunities. I can't recommend it enough!",
     img: people,
-    name: "Courtney Henry",
-    post: "Web Designer",
+    name: "Emily Johnson",
+    post: "Software Engineer",
+  },
+  {
+    title: "Excellent Experience",
+    desc: "Uniemtech has exceeded my expectations in every aspect. The user-friendly interface, extensive features, and exceptional customer support make it a top-notch platform for both beginners and professionals. Highly recommended!",
+    img: people,
+    name: "Alexandra Smith",
+    post: "Digital Marketer",
   },
 ];
 
@@ -64,7 +71,7 @@ const WhatPeopleSay = () => {
         What People Say
       </h3>
       <p className="text-center font-walsheimReg text-[15px] leading-[26px] text-[400] text-white">
-        Lorem ipsum dolor sit amet, consectetur.
+      Testimonials from Our Students
       </p>
       <Swiper
         spaceBetween={90}

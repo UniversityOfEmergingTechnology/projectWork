@@ -18,9 +18,9 @@ import card3 from "../assets/card3.svg";
 import card4 from "../assets/card4.svg";
 import card5 from "../assets/card5.svg";
 import quotation from "../assets/quotation.svg";
-import things from "../assets/skills.png";
-import instructor from '../assets/Instructor.png'
-import student from '../assets/student.png'
+import things from "../assets/Others/skills.jpeg";
+import instructor from '../assets/Others/instructor.jpeg'
+import student from '../assets/Others/student.jpeg'
 
 import amazon from '../assets/brands/amazon.svg'
 import amd from '../assets/brands/amd.svg'
@@ -141,11 +141,8 @@ const AboutUs = () => {
               day – for free! Check out the list below.. Take the course for
               free
             </p>
-            <p className="font-walsheimReg leading-[26px] font-[400] text-[15px] ">
-              Neque convallis a cras semper auctor. Libero id faucibus nisl
-              tincidunt egetnvallis a cras semper auctonvallis a cras semper
-              aucto. Neque convallis a cras semper auctor. Liberoe convallis a
-              cras semper atincidunt egetnval
+            <p className="font-walsheimReg text-justify leading-[26px] font-[400] text-[15px] ">
+            Enhance your skills and broaden your knowledge with our comprehensive courses. Whether you're a student, professional, or lifelong learner, UnimTech offers a wide range of courses designed to help you excel in your chosen field. From programming and data science to cybersecurity and cloud computing, our courses are crafted to provide you with the knowledge and practical skills needed to thrive in today's tech-driven world. Join us on this learning journey and unlock your true potential with UnimTech!
             </p>
             <button className="self-start px-[55px] py-[21px]  text-white bg-[#6440FB] font-walsheimCon duration-300 cursor-pointer hover:scale-90 rounded-lg">
               Start Learning For Free
@@ -258,7 +255,7 @@ const AboutUs = () => {
             </button>
           </div>
           <div className="relative">
-            <img src={things} className="w-[500px]  h-[612px] rounded-[10px]" alt="" />
+            <img src={things} className="w-[600px]  h-[612px] rounded-[10px]" alt="" />
             <div className="absolute top-[200px] -left-[220px] bg-black w-[300px] h-[355px] gap-[35px] flex flex-col justify-center rounded-lg pl-5">
               {
                 featuresData.map((feature , index) => (
@@ -273,7 +270,7 @@ const AboutUs = () => {
         </div>
         <div className="flex flex-row my-[50px] justify-between">
         <div className="w-[50%] flex justify-start">
-            <img src={instructor}  className="w-[500px]  h-[512px] " alt="" />
+            <img src={instructor}  className="w-[600px]  h-[442px] " alt="" />
           </div>
           <div className="flex flex-col gap-[20px]  justify-center h-[400px] w-[50%]">
             <h1 className="text-darkblue text-[45px] font-walsheimCon font-[700] leading-normal">
@@ -300,7 +297,7 @@ const AboutUs = () => {
             </button>
           </div>
           <div className="w-[50%]  flex justify-center">
-            <img src={student} className="border-[1px] border-black rounded-[10px] w-[500px]  h-[512px] " alt="" />
+            <img src={student} className="border-[1px] border-black rounded-[10px] w-[600px]  h-[512px] " alt="" />
           </div>
         </div>
 

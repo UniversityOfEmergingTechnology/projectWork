@@ -165,7 +165,7 @@ function CourseDetails() {
       <Navbar />
       {clientSecret === "" ? (
         <>
-          <div className={`relative w-full bg-white text-darkblue`}>
+          <div className={`relative w-full  bg-white text-darkblue`}>
             {/* Hero Section */}
             <div className="mx-auto box-content px-4 lg:w-[1260px] 2xl:relative ">
               <div className="mx-auto grid min-h-[450px] max-w-maxContentTab justify-items-center py-8 lg:mx-0 lg:justify-items-start lg:py-0 xl:max-w-[810px]">
@@ -185,7 +185,7 @@ function CourseDetails() {
                       {courseName}
                     </p>
                   </div>
-                  <p className={`text-richblack-500`}>{courseDescription}</p>
+                  <p className={`text-richblack-500 text-justify`}>{courseDescription}</p>
                   <div className="text-md flex flex-wrap items-center gap-2">
                     <span className="text-yellow-700">{avgReviewCount}</span>
                     <RatingStars Review_Count={avgReviewCount} Star_Size={24} />

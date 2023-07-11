@@ -15,29 +15,29 @@ import {toast} from 'react-hot-toast'
 
 const faqData = [
   {
-    question: "Do you offer discounts for students?",
+    question: "What courses do you offer for students?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+      "At UnimTech, we offer a wide range of courses tailored for students in various disciplines, including programming, data science, cybersecurity, and cloud computing. Our courses are designed to provide comprehensive knowledge and practical skills to help students excel in their chosen fields.",
   },
   {
-    question: "Do you offer discounts for students?",
+    question: "How can I enroll in a course?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+      "Enrolling in a course at UnimTech is easy! Simply browse our course catalog, choose the course you're interested in, and click on the 'Enroll Now' button. Follow the instructions to complete the enrollment process, and you'll gain access to the course materials and resources.",
   },
   {
-    question: "Do you offer discounts for students?",
+    question: "Are the courses self-paced or instructor-led?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+      "We offer both self-paced and instructor-led courses to cater to different learning preferences. Our self-paced courses allow you to learn at your own pace, accessing the course materials and completing assignments at your convenience. For instructor-led courses, you'll have scheduled lectures and interactions with the instructor and fellow students.",
   },
   {
-    question: "Do you offer discounts for students?",
+    question: "Do you provide certificates upon course completion?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+      "Yes, upon successful completion of a course, you will receive a certificate of completion from UnimTech. Our certificates are recognized and can be used to showcase your skills and knowledge to potential employers or academic institutions.",
   },
   {
-    question: "Do you offer discounts for students?",
+    question: "Are there any prerequisites for the courses?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+      "The prerequisites for each course may vary. Some courses require a basic understanding of programming concepts, while others may require prior knowledge in specific domains. You can find the prerequisites listed on the course details page. If you have any specific questions, feel free to reach out to our support team.",
   },
 ];
 
@@ -62,8 +62,8 @@ const TouchData = [
 ];
 
 const center = {
-  lat: 34.0522,
-  lng: -118.2437,
+  lat: 	-37.809811,
+  lng: 	144.965195,
 };
 const ContactUs = () => {
   //   AIzaSyAbDLor5DBBfrNKD0FmiRR8PU1zeSPoD6E
@@ -121,10 +121,9 @@ const ContactUs = () => {
               Keep in Touch With Us
             </h3>
             <p className="text-[#4F547B] text-[15px] leading-normal font-normal font-walsheimReg">
-              Neque convallis a cras semper auctor. Libero id faucibus nisl
-              tincidunt egetnvallis.
+            Stay connected with us
             </p>
-            <div className="flex flex-col mt-[80px] gap-[50px]">
+            <div className="flex flex-col mt-[50px] gap-[50px]">
               {TouchData.map((touch, index) => (
                 <div
                   key={index}
@@ -146,8 +145,7 @@ const ContactUs = () => {
               Send a Message{" "}
             </h3>
             <p className="text-[#4F547B] text-[15px] leading-normal font-normal font-walsheimReg">
-              Neque convallis a cras semper auctor. Libero id <br />
-              faucibus nisl tincidunt egetnvallis.
+            Contact us by sending a message:
             </p>
             <form
               onSubmit={handleSubmit(submitContactForm)}
@@ -233,7 +231,7 @@ const ContactUs = () => {
           Frequently Asked Questions.
         </h1>
         <p className="font-walsheimReg leading-[26px] font-[400] text-[15px] text-center">
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        Find answers to commonly asked questions below:
         </p>
         <div className="flex mt-[50px] flex-col gap-[10px] items-center">
           {faqData.map((faq, index) => (

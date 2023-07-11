@@ -41,6 +41,9 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="catalog/:catalogName" element={<Catalog />} />
         <Route path="courses/:courseId" element={<CourseDetails />} />
+        <Route path="/terms-conditions" element={<TermsAndConditions />} />
+        <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/about-us" element={<AboutUs />} />
 
         <Route
           path="/login"
@@ -79,30 +82,6 @@ function App() {
           element={
             <OpenRoute>
               <UpdatePassword />
-            </OpenRoute>
-          }
-        />
-        <Route
-          path="/terms-conditions"
-          element={
-            <OpenRoute>
-              <TermsAndConditions />
-            </OpenRoute>
-          }
-        />
-        <Route
-          path="/contact-us"
-          element={
-            <OpenRoute>
-              <ContactUs />
-            </OpenRoute>
-          }
-        />
-        <Route
-          path="/about-us"
-          element={
-            <OpenRoute>
-              <AboutUs />
             </OpenRoute>
           }
         />

@@ -27,6 +27,10 @@ const pages = [
     name: "Contact Us",
     path: "/contact-us",
   },
+  {
+    name : "About Us",
+    path : "/about-us"
+  }
 ];
 
 const Navbar = ({ theme }) => {
@@ -112,8 +116,8 @@ const Navbar = ({ theme }) => {
         } `}
       >
         <div className="flex flex-row cursor-pointer gap-[0.5rem] items-center">
-          <Link to="/" className="text-[15px] ">
-            Home
+          <Link to="/about-us" className="text-[15px] ">
+            About Us
           </Link>
           {/* <img src={Vector}  alt="Vector" /> */}
         </div>

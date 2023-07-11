@@ -35,7 +35,7 @@ const FAQItem = ({ faq, isSelected, onSelected }) => {
           classNames="faq"
           unmountOnExit
         >
-          <p className="text-[#4F547B] font-walsheimMed leading-[26px] font-normal">
+          <p className="text-[#4F547B] text-justify font-walsheimMed leading-[26px] font-normal">
             {faq.answer}
           </p>
         </CSSTransition>

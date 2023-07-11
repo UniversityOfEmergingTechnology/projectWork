@@ -42,7 +42,7 @@ const WhyFutureLearn = () => {
         Why FutureLearn?{" "}
       </h2>
       <h5 className="leading-[26px] font-walsheimReg text-[15px] text-[#4F547B] text-center">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      Embrace the Future with Future Learn
       </h5>
       {/* Cards container */}
       <div className="flex w-[100%] flex-wrap sm:gap-5 xl:flex-nowrap flex-row mt-[100px] items-center justify-center">

@@ -14,7 +14,7 @@ const Course_Card = ({ course, Height }) => {
   return (
     <>
       <Link to={`/courses/${course._id}`}>
-        <div className="">
+        <div className="hover:scale-90 duration-300">
           <div className="rounded-lg">
             <img
               src={course?.thumbnail}
