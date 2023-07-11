@@ -134,7 +134,7 @@ const AboutUs = () => {
           </div>
           <div className="flex flex-col w-[40%] justify-center gap-[40px]">
             <h2 className="text-darkblue text-[30px] leading-[50px] font-[700] font-walsheimCon">
-              Welcome to Educrat Enhance your skills with best Online courses
+              Welcome to Uniemtech Enhance your skills with best Online courses
             </h2>
             <p className="font-walsheimReg leading-[26px] font-[400] text-[15px]">
               You can start and finish one of these popular courses in under a
@@ -233,7 +233,7 @@ const AboutUs = () => {
           alt=""
         />
         <p className="text-darkblue w-[30%] mx-auto text-[15px] leading-[26px] font-[400] font-walsheimReg text-center">
-          It is no exaggeration to say this Educrat experience was
+          It is no exaggeration to say this Uniemtech experience was
           transformative–both professionally and personally. This workshop will
           long remain a high point of my life.
         </p>

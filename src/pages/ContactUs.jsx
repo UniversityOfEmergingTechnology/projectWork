@@ -57,7 +57,7 @@ const TouchData = [
   },
   {
     img: mail,
-    data: "hi@educrat.com",
+    data: "hi@Uniemtech.com",
   },
 ];
 

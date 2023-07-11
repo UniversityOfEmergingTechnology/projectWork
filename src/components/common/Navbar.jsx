@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import logo from "../../assets/logo.svg";
+import logo from "../../assets/new_logo.png";
 import Search from "../../assets/Search.jsx";
 import Sidebar from "../../assets/Sidebar.jsx";
 import Basket from "../../assets/Basket.jsx";
@@ -71,9 +71,9 @@ const Navbar = ({ theme }) => {
           <h2
             className={`${
               theme === "dark" ? "text-white" : "text-black"
-            } font-[700] text-[18px] font-walsheimCon leading-normal`}
+            } font-[700] text-[10px] lg:text-[18px] text-center font-walsheimCon leading-normal`}
           >
-            Educrat
+            Uniemtech <br className="text-[6px] lg:text-sm"/>Digital Academy
           </h2>
         </Link>
         <div className="hidden lg:flex flex-row pl-[40px]  items-center gap-4">

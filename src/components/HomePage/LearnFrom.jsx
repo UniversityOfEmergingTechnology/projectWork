@@ -17,7 +17,7 @@ const LearnFrom = () => {
             <span className="text-[#6440FB]">Anywhere</span>
           </h3>
           <p className="text-[#140342] font-normal font-walsheimReg leading-[26px]">
-            Take classes on the go with the educrat app. Stream or download to
+            Take classes on the go with the Uniemtech app. Stream or download to
             watch on the plane, the subway, or wherever you learn best.
           </p>
           <div className="flex lg:flex-row gap-5  flex-col">

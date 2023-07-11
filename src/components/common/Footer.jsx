@@ -3,7 +3,7 @@ import { FooterLink2 } from "../../data/footer-links";
 import { Link } from "react-router-dom";
 
 // Images
-import Logo from "../../assets/logo2.svg";
+import Logo from "../../assets/new_logo2.png";
 
 // Icons
 import { FaFacebook, FaGoogle, FaTwitter, FaYoutube } from "react-icons/fa";
@@ -174,7 +174,7 @@ const Footer = () => {
 
           <div className="text-center mt-[50px] lg:mt-0">
             {" "}
-            © 2023 Educraft All Rights Reserved
+            © 2023 Uniemtech All Rights Reserved
           </div>
         </div>
       </div>
