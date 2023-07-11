@@ -65,14 +65,21 @@ exports.contactUsEmail = (
             .highlight {
                 font-weight: bold;
             }
+            .heading{
+				max-width:200px;
+				font-size : 24px;
+				font-weight: bold;
+				text-align:center;
+				margin:0 auto;
+				margin-bottom:50px;
+			}
         </style>
     
     </head>
     
     <body>
         <div class="container">
-            <a href="https://Uniemtech-edtech-project.vercel.app"><img class="logo"
-                    src="https://asset.cloudinary.com/dylkdmcsl/1b7d032736e1d9427283942e78ba5fc1" alt="Uniemtech Logo"></a>
+        <h1 class="heading">Uniemtech Digital Academy</h1>
             <div class="message">Contact Form Confirmation</div>
             <div class="body">
                 <p>Dear ${name},</p>
